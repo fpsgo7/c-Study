@@ -1,0 +1,7 @@
+D:\unity\C#Study\c-Study\Study\pointerStudy0303\pointerStudy0303\bin\Debug\pointerStudy0303.exe.config
+D:\unity\C#Study\c-Study\Study\pointerStudy0303\pointerStudy0303\bin\Debug\pointerStudy0303.exe
+D:\unity\C#Study\c-Study\Study\pointerStudy0303\pointerStudy0303\bin\Debug\pointerStudy0303.pdb
+D:\unity\C#Study\c-Study\Study\pointerStudy0303\pointerStudy0303\obj\Debug\pointerStudy0303.csproj.AssemblyReference.cache
+D:\unity\C#Study\c-Study\Study\pointerStudy0303\pointerStudy0303\obj\Debug\pointerStudy0303.csproj.CoreCompileInputs.cache
+D:\unity\C#Study\c-Study\Study\pointerStudy0303\pointerStudy0303\obj\Debug\pointerStudy0303.exe
+D:\unity\C#Study\c-Study\Study\pointerStudy0303\pointerStudy0303\obj\Debug\pointerStudy0303.pdb

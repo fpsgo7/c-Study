@@ -1,0 +1,7 @@
+D:\unity\C#Study\c-Study\codingTestStudy\SolutionNote\SolutionNote\bin\Debug\SolutionNote.exe.config
+D:\unity\C#Study\c-Study\codingTestStudy\SolutionNote\SolutionNote\bin\Debug\SolutionNote.exe
+D:\unity\C#Study\c-Study\codingTestStudy\SolutionNote\SolutionNote\bin\Debug\SolutionNote.pdb
+D:\unity\C#Study\c-Study\codingTestStudy\SolutionNote\SolutionNote\obj\Debug\SolutionNote.csproj.AssemblyReference.cache
+D:\unity\C#Study\c-Study\codingTestStudy\SolutionNote\SolutionNote\obj\Debug\SolutionNote.csproj.CoreCompileInputs.cache
+D:\unity\C#Study\c-Study\codingTestStudy\SolutionNote\SolutionNote\obj\Debug\SolutionNote.exe
+D:\unity\C#Study\c-Study\codingTestStudy\SolutionNote\SolutionNote\obj\Debug\SolutionNote.pdb

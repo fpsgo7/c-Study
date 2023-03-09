@@ -1,0 +1,6 @@
+D:\unity\C#Study\c-Study\codingTestStudy\Matter1-9\Matter1-9\bin\Debug\Matter1-9.exe.config
+D:\unity\C#Study\c-Study\codingTestStudy\Matter1-9\Matter1-9\bin\Debug\Matter1-9.exe
+D:\unity\C#Study\c-Study\codingTestStudy\Matter1-9\Matter1-9\bin\Debug\Matter1-9.pdb
+D:\unity\C#Study\c-Study\codingTestStudy\Matter1-9\Matter1-9\obj\Debug\Matter1-9.csproj.CoreCompileInputs.cache
+D:\unity\C#Study\c-Study\codingTestStudy\Matter1-9\Matter1-9\obj\Debug\Matter1-9.exe
+D:\unity\C#Study\c-Study\codingTestStudy\Matter1-9\Matter1-9\obj\Debug\Matter1-9.pdb
