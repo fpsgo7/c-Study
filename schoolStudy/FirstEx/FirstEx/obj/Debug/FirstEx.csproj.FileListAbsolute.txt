@@ -1,0 +1,11 @@
+C:\대학교 4학년 1학기\FirstEx\FirstEx\bin\Debug\FirstEx.exe.config
+C:\대학교 4학년 1학기\FirstEx\FirstEx\bin\Debug\FirstEx.exe
+C:\대학교 4학년 1학기\FirstEx\FirstEx\bin\Debug\FirstEx.pdb
+C:\대학교 4학년 1학기\FirstEx\FirstEx\obj\Debug\FirstEx.csproj.AssemblyReference.cache
+C:\대학교 4학년 1학기\FirstEx\FirstEx\obj\Debug\FirstEx.Properties.Resources.resources
+C:\대학교 4학년 1학기\FirstEx\FirstEx\obj\Debug\FirstEx.csproj.GenerateResource.cache
+C:\대학교 4학년 1학기\FirstEx\FirstEx\obj\Debug\FirstEx.csproj.CoreCompileInputs.cache
+C:\대학교 4학년 1학기\FirstEx\FirstEx\obj\Debug\FirstEx.exe
+C:\대학교 4학년 1학기\FirstEx\FirstEx\obj\Debug\FirstEx.pdb
+C:\대학교 4학년 1학기\FirstEx\FirstEx\obj\Debug\FirstEx.LoginFrm.resources
+C:\대학교 4학년 1학기\FirstEx\FirstEx\obj\Debug\FirstEx.OptionFrm.resources

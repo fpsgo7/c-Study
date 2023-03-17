@@ -1,0 +1,11 @@
+C:\대학교 4학년 1학기\c-Study\study2\study2\bin\Debug\study2.exe.config
+C:\대학교 4학년 1학기\c-Study\study2\study2\bin\Debug\study2.exe
+C:\대학교 4학년 1학기\c-Study\study2\study2\bin\Debug\study2.pdb
+C:\대학교 4학년 1학기\c-Study\study2\study2\obj\Debug\study2.csproj.AssemblyReference.cache
+C:\대학교 4학년 1학기\c-Study\study2\study2\obj\Debug\study2.MainRfm.resources
+C:\대학교 4학년 1학기\c-Study\study2\study2\obj\Debug\study2.Properties.Resources.resources
+C:\대학교 4학년 1학기\c-Study\study2\study2\obj\Debug\study2.UserMgrFrm.resources
+C:\대학교 4학년 1학기\c-Study\study2\study2\obj\Debug\study2.csproj.GenerateResource.cache
+C:\대학교 4학년 1학기\c-Study\study2\study2\obj\Debug\study2.csproj.CoreCompileInputs.cache
+C:\대학교 4학년 1학기\c-Study\study2\study2\obj\Debug\study2.exe
+C:\대학교 4학년 1학기\c-Study\study2\study2\obj\Debug\study2.pdb
