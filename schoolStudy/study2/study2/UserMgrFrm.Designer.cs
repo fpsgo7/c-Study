@@ -43,6 +43,7 @@ namespace study2
             this.label2 = new System.Windows.Forms.Label();
             this.UpdateBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
+            this.ecelWrite = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // numTxt
@@ -51,6 +52,7 @@ namespace study2
             this.numTxt.Name = "numTxt";
             this.numTxt.Size = new System.Drawing.Size(100, 25);
             this.numTxt.TabIndex = 1;
+            this.numTxt.TextChanged += new System.EventHandler(this.numTxt_TextChanged);
             // 
             // telNumberTxt
             // 
@@ -100,10 +102,11 @@ namespace study2
             this.columnHeader2,
             this.columnHeader3});
             this.totalLv.FullRowSelect = true;
+            this.totalLv.HideSelection = false;
             this.totalLv.Location = new System.Drawing.Point(-1, 220);
             this.totalLv.MultiSelect = false;
             this.totalLv.Name = "totalLv";
-            this.totalLv.Size = new System.Drawing.Size(612, 283);
+            this.totalLv.Size = new System.Drawing.Size(857, 283);
             this.totalLv.TabIndex = 15;
             this.totalLv.UseCompatibleStateImageBehavior = false;
             this.totalLv.View = System.Windows.Forms.View.Details;
@@ -160,11 +163,22 @@ namespace study2
             this.deleteBtn.UseVisualStyleBackColor = true;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
+            // ecelWrite
+            // 
+            this.ecelWrite.Location = new System.Drawing.Point(629, 165);
+            this.ecelWrite.Name = "ecelWrite";
+            this.ecelWrite.Size = new System.Drawing.Size(117, 40);
+            this.ecelWrite.TabIndex = 20;
+            this.ecelWrite.Text = "엑셀 쓰기\r\n";
+            this.ecelWrite.UseVisualStyleBackColor = true;
+            this.ecelWrite.Click += new System.EventHandler(this.excelWrite_Click);
+            // 
             // UserMgrFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 506);
+            this.ClientSize = new System.Drawing.Size(859, 506);
+            this.Controls.Add(this.ecelWrite);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.label2);
@@ -178,6 +192,7 @@ namespace study2
             this.Controls.Add(this.numTxt);
             this.Name = "UserMgrFrm";
             this.Text = "UserMgrFrm";
+            this.Shown += new System.EventHandler(this.UserMgrFrm_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,5 +213,6 @@ namespace study2
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button UpdateBtn;
         private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.Button ecelWrite;
     }
 }
