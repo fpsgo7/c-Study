@@ -21,3 +21,15 @@ C:\대학교 4학년 1학기\c-Study\schoolStudy\study2\study2\obj\Debug\study2.
 C:\대학교 4학년 1학기\c-Study\schoolStudy\study2\study2\obj\Debug\study2.csproj.CoreCompileInputs.cache
 C:\대학교 4학년 1학기\c-Study\schoolStudy\study2\study2\obj\Debug\study2.exe
 C:\대학교 4학년 1학기\c-Study\schoolStudy\study2\study2\obj\Debug\study2.pdb
+D:\unity\C#Study\c-Study\schoolStudy\study2\study2\bin\Debug\study2.exe.config
+D:\unity\C#Study\c-Study\schoolStudy\study2\study2\bin\Debug\study2.exe
+D:\unity\C#Study\c-Study\schoolStudy\study2\study2\bin\Debug\study2.pdb
+D:\unity\C#Study\c-Study\schoolStudy\study2\study2\obj\Debug\study2.csproj.AssemblyReference.cache
+D:\unity\C#Study\c-Study\schoolStudy\study2\study2\obj\Debug\study2.csproj.ResolveComReference.cache
+D:\unity\C#Study\c-Study\schoolStudy\study2\study2\obj\Debug\study2.MainRfm.resources
+D:\unity\C#Study\c-Study\schoolStudy\study2\study2\obj\Debug\study2.Properties.Resources.resources
+D:\unity\C#Study\c-Study\schoolStudy\study2\study2\obj\Debug\study2.UserMgrFrm.resources
+D:\unity\C#Study\c-Study\schoolStudy\study2\study2\obj\Debug\study2.csproj.GenerateResource.cache
+D:\unity\C#Study\c-Study\schoolStudy\study2\study2\obj\Debug\study2.csproj.CoreCompileInputs.cache
+D:\unity\C#Study\c-Study\schoolStudy\study2\study2\obj\Debug\study2.exe
+D:\unity\C#Study\c-Study\schoolStudy\study2\study2\obj\Debug\study2.pdb
