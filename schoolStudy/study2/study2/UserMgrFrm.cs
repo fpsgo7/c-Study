@@ -24,20 +24,16 @@ namespace study2
 
         }
 
-        private void loginBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void insertBtn_Click(object sender, EventArgs e)
         {
             string[] values = new string[3];
             values[0] = this.numTxt.Text;
             values[1] = this.nameTxt.Text;
-            values[2] = this.telNumberTxt.Text;
-            this.totalLv.Items.Add(new ListViewItem(values));
-
+            values[2] = this.contactTxt.Text;
+            ListViewItem item = new ListViewItem(values);
+            this.Tag = new UserVO(values);
+            this.totalLv.Items.Add(item);
+            item.Tag = new UserVO(values);
         }
 
         private void UpdateBtn_Click(object sender, EventArgs e)
@@ -48,12 +44,16 @@ namespace study2
             string[] values = new string[3];
             values[0] = this.numTxt.Text;
             values[1] = this.nameTxt.Text;
-            values[2] = this.telNumberTxt.Text;
-            int selectedIndex = this.totalLv.SelectedIndices[0];
+            values[2] = this.contactTxt.Text;
 
-            ListViewItem item = new ListViewItem(values);// 힙해할당되기에 여기서 캐싱해도 문제는 없다.
-            this.totalLv.Items[selectedIndex] = item;
-            item.Selected = true;
+            int selectedIndex = this.totalLv.SelectedIndices[0];
+            UserVO userVO = (UserVO)this.totalLv.Items[selectedIndex].Tag;
+            this.totalLv.Items[selectedIndex] = new ListViewItem(values);
+            userVO.Order = values[0];
+            userVO.Name = values[1];
+            userVO.Contact = values[2];
+            this.totalLv.Items[selectedIndex].Tag = userVO;
+
             SetListViewSelectColor();
         }
         //리스트의  FullRowSelect 설정을 true 해야한다.
@@ -64,12 +64,15 @@ namespace study2
             if (totalLv.FocusedItem == null)
                 return;
             ListViewItem selectedItem = totalLv.FocusedItem;
+            UserVO userVO = (UserVO)selectedItem.Tag;
 
-            this.numTxt.Text = selectedItem.SubItems[0].Text;
+            this.numTxt.Text = userVO.order;
+            //this.numTxt.Text = selectedItem.SubItems[0].Text;
+            this.nameTxt.Text = userVO.Name;
+            //this.nameTxt.Text = selectedItem.SubItems[1].Text;
+            this.contactTxt.Text = userVO.Contact;
+            //this.telNumberTxt.Text = selectedItem.SubItems[2].Text;
 
-            this.nameTxt.Text = selectedItem.SubItems[1].Text;
-
-            this.telNumberTxt.Text = selectedItem.SubItems[2].Text;
             SetListViewSelectColor();
         }
 
@@ -98,6 +101,7 @@ namespace study2
         private void numTxt_TextChanged(object sender, EventArgs e)
         {
 
+
         }
         // 액셀 관련
         private void UserMgrFrm_Shown(object sender, EventArgs e)
@@ -125,7 +129,10 @@ namespace study2
                         string str = "" + (range.Cells[row, column] as Excel.Range).Value2;
                         cellValues[column - 1] = str;
                     }
-                    this.totalLv.Items.Add(new ListViewItem(cellValues)); ;
+                    UserVO userVO = new UserVO(cellValues);
+                    ListViewItem item = new ListViewItem(cellValues);
+                    item.Tag = userVO;
+                    this.totalLv.Items.Add(item); ;
                 }
                 workBook.Close(true);
                 excelApp.Quit();

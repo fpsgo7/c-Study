@@ -30,7 +30,7 @@ namespace study2
         private void InitializeComponent()
         {
             this.numTxt = new System.Windows.Forms.TextBox();
-            this.telNumberTxt = new System.Windows.Forms.TextBox();
+            this.contactTxt = new System.Windows.Forms.TextBox();
             this.nameTxt = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,10 +56,10 @@ namespace study2
             // 
             // telNumberTxt
             // 
-            this.telNumberTxt.Location = new System.Drawing.Point(146, 107);
-            this.telNumberTxt.Name = "telNumberTxt";
-            this.telNumberTxt.Size = new System.Drawing.Size(100, 25);
-            this.telNumberTxt.TabIndex = 3;
+            this.contactTxt.Location = new System.Drawing.Point(146, 107);
+            this.contactTxt.Name = "telNumberTxt";
+            this.contactTxt.Size = new System.Drawing.Size(100, 25);
+            this.contactTxt.TabIndex = 3;
             // 
             // nameTxt
             // 
@@ -188,7 +188,7 @@ namespace study2
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.nameTxt);
-            this.Controls.Add(this.telNumberTxt);
+            this.Controls.Add(this.contactTxt);
             this.Controls.Add(this.numTxt);
             this.Name = "UserMgrFrm";
             this.Text = "UserMgrFrm";
@@ -200,7 +200,7 @@ namespace study2
 
         #endregion
         private System.Windows.Forms.TextBox numTxt;
-        private System.Windows.Forms.TextBox telNumberTxt;
+        private System.Windows.Forms.TextBox contactTxt;
         private System.Windows.Forms.TextBox nameTxt;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
