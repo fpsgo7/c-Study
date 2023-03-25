@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Matter3_24.Search-20230324-171431</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.5, OS=Windows 10 (10.0.19044.2728/21H2/November2021Update)
+Intel Core i5-8400 CPU 2.80GHz (Coffee Lake), 1 CPU, 6 logical and 6 physical cores
+.NET SDK=5.0.302
+  [Host]     : .NET 5.0.8 (5.0.821.31504), X64 RyuJIT AVX2
+  DefaultJob : .NET 5.0.8 (5.0.821.31504), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>         Method</th><th>    Mean</th><th>Error</th><th>StdDev</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>SequentialSearch0</td><td>0.5200 ns</td><td>0.0045 ns</td><td>0.0035 ns</td><td>-</td>
+</tr><tr><td>SequentialSearch1000</td><td>538.0838 ns</td><td>0.9343 ns</td><td>0.8282 ns</td><td>-</td>
+</tr><tr><td>SequentialSearch5000</td><td>2,659.4518 ns</td><td>4.8621 ns</td><td>4.3102 ns</td><td>-</td>
+</tr><tr><td>SequentialSearch10000</td><td>5,317.6078 ns</td><td>4.3263 ns</td><td>3.6126 ns</td><td>-</td>
+</tr><tr><td>SequentialSearch20000</td><td>10,619.1245 ns</td><td>16.9004 ns</td><td>14.9818 ns</td><td>-</td>
+</tr><tr><td>SequentialSearch30000</td><td>15,913.4705 ns</td><td>19.4233 ns</td><td>17.2183 ns</td><td>-</td>
+</tr><tr><td>SequentialSearch40000</td><td>21,254.5803 ns</td><td>42.7362 ns</td><td>37.8845 ns</td><td>-</td>
+</tr><tr><td>SequentialSearch50000</td><td>26,568.2509 ns</td><td>54.1313 ns</td><td>50.6345 ns</td><td>-</td>
+</tr><tr><td>BinarySearch0</td><td>16.4451 ns</td><td>0.0175 ns</td><td>0.0164 ns</td><td>-</td>
+</tr><tr><td>BinarySearch1000</td><td>16.3082 ns</td><td>0.0201 ns</td><td>0.0168 ns</td><td>-</td>
+</tr><tr><td>BinarySearch5000</td><td>15.8653 ns</td><td>0.0401 ns</td><td>0.0355 ns</td><td>-</td>
+</tr><tr><td>BinarySearch10000</td><td>17.1317 ns</td><td>0.0288 ns</td><td>0.0255 ns</td><td>-</td>
+</tr><tr><td>BinarySearch20000</td><td>17.4925 ns</td><td>0.2006 ns</td><td>0.1778 ns</td><td>-</td>
+</tr><tr><td>BinarySearch30000</td><td>14.5544 ns</td><td>0.0661 ns</td><td>0.0586 ns</td><td>-</td>
+</tr><tr><td>BinarySearch40000</td><td>17.7270 ns</td><td>0.0443 ns</td><td>0.0414 ns</td><td>-</td>
+</tr><tr><td>BinarySearch50000</td><td>16.5218 ns</td><td>0.0169 ns</td><td>0.0150 ns</td><td>-</td>
+</tr></tbody></table>
+</body>
+</html>

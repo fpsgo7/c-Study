@@ -136,17 +136,16 @@ namespace Matter03_22
             return texts[0];
         }
     }
-    //[MemoryDiagnoser]
+    [MemoryDiagnoser]
     public class ParseAllTest
     {
         string s = "123";
         int a = 0;
         bool b;
-        //[Benchmark]
+        [Benchmark]
         public void MyParseStart()
         {
             int multiply = 1;
-
             for (int i = s.Length - 1; i >= 0; i--)
             {
                 int b = s[i] - 48;
@@ -156,18 +155,18 @@ namespace Matter03_22
             }
             Console.WriteLine(a);
         }
-        //[Benchmark]
-        //public void TryParseStart()
-        //{
-        //    b = int.TryParse(s, out a);
-        //    a = 0;
-        //}
-        //[Benchmark]
-        //public void ParseStart()
-        //{
-        //    a = int.Parse(s);
-        //    a = 0;
-        //}
+        [Benchmark]
+        public void TryParseStart()
+        {
+            b = int.TryParse(s, out a);
+            a = 0;
+        }
+        [Benchmark]
+        public void ParseStart()
+        {
+            a = int.Parse(s);
+            a = 0;
+        }
     }
     class Program
     {
@@ -180,9 +179,9 @@ namespace Matter03_22
             //var summery3 = BenchmarkRunner.Run<MyParse>();
             //var summery3 = BenchmarkRunner.Run<UseSplit>();
             //var summery3 = BenchmarkRunner.Run<MySplit>();
-            //BenchmarkRunner.Run<ParseAllTest>();
-            ParseAllTest p = new ParseAllTest();
-            p.MyParseStart();
+            BenchmarkRunner.Run<ParseAllTest>();
+            //ParseAllTest p = new ParseAllTest();
+            //p.MyParseStart();
 
         }
     }
