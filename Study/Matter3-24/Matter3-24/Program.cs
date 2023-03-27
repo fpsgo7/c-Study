@@ -11,7 +11,12 @@ namespace Matter3_24
         {
             //Search s = new Search();
             //s.BinarySearch();
-            BenchmarkRunner.Run<Search>();
+            //BenchmarkRunner.Run<Search>();
+            //TimewatchTest t = new TimewatchTest();
+            //t.TimeWatchStringBuilder10000();
+            //t.TimeWatchString10000();
+            BenchmarkRunner.Run<TimewatchTest>();
+
         }
     }
 }
