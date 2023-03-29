@@ -8,7 +8,9 @@ Intel Core i5-8400 CPU 2.80GHz (Coffee Lake), 1 CPU, 6 logical and 6 physical co
 
 
 ```
-|                      Method |    Mean |    Error |   StdDev | Allocated |
-|---------------------------- |--------:|---------:|---------:|----------:|
-|        TimeWatchString10000 | 1.145 s | 0.0157 s | 0.0146 s | 630.28 KB |
-| TimeWatchStringBuilder10000 | 1.161 s | 0.0229 s | 0.0377 s | 735.91 KB |
+|                       Method |     Mean |     Error |    StdDev |     Gen0 |   Gen1 | Allocated |
+|----------------------------- |---------:|----------:|----------:|---------:|-------:|----------:|
+|         TimeWatchString10000 | 2.578 ms | 0.0143 ms | 0.0127 ms | 132.8125 |      - | 624.33 KB |
+| TimeWatchStringBuilder10000A | 3.292 ms | 0.0553 ms | 0.0700 ms |  82.0313 | 3.9063 | 384.02 KB |
+| TimeWatchStringBuilder10000B | 2.352 ms | 0.0039 ms | 0.0031 ms |  50.7813 |      - | 234.48 KB |
+| TimeWatchStringBuilder10000C | 2.349 ms | 0.0220 ms | 0.0206 ms |  78.1250 | 7.8125 |  377.8 KB |

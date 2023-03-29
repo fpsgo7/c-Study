@@ -26,44 +26,52 @@ namespace Matter3_24
 		{
 			int length = nums.Length;
 			int searchNum = 10000;
-			for (int i = 0; i < length; i++)
-			{
-				if(nums[i] == searchNum)
+            if (searchNum >= 0 && searchNum <= 50000)
+            {
+                for (int i = 0; i < length; i++)
                 {
-					Console.WriteLine(i);
-					return;
+                    if (nums[i] == searchNum)
+                    {
+                        Console.WriteLine(i);
+                        return;
+                    }
                 }
-			}
+            }   
 		}
 		public void BinarySearch()
         {
-			int searchNum = 50000;
-			int max = nums[nums.Length-1];
+			int searchNum = 60000;
+          
+
+            int max = nums[nums.Length-1];
 			int min = nums[0];
 			int middle;
-
-            while (true)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-				middle = (max +min)/ 2;
-				if (searchNum == middle)
+                while (true)
                 {
-					Console.WriteLine("찾았습니다." + middle);
-					return;
-				}
-					
-				if (searchNum > middle)
-                {
-					Console.WriteLine($"최소 {min} 최대 {max} 중간{middle}");
-					min = middle +1;
-					
-				}
-				else if (searchNum < middle)
-                {
-					Console.WriteLine($"최소 {min} 최대 {max} 중간{middle}");
-					max = middle -1;
-				}
-					
-			}
+                    middle = (max + min) / 2;
+                    if (searchNum == middle)
+                    {
+                        Console.WriteLine("찾았습니다." + middle);
+                        return;
+                    }
+
+                    if (searchNum > middle)
+                    {
+                        Console.WriteLine($"최소 {min} 최대 {max} 중간{middle}");
+                        min = middle + 1;
+
+                    }
+                    else if (searchNum < middle)
+                    {
+                        Console.WriteLine($"최소 {min} 최대 {max} 중간{middle}");
+                        max = middle - 1;
+                    }
+
+                }
+            }
+                
         }
 
         //순차 탐색 0,1000,5000,10000,20000,30000,40000,50000
@@ -73,11 +81,14 @@ namespace Matter3_24
         {
             int length = nums.Length;
             int searchNum = 0;
-            for (int i = 0; i < length; i++)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-                if (nums[i] == searchNum)
+                for (int i = 0; i < length; i++)
                 {
-                    return;
+                    if (nums[i] == searchNum)
+                    {
+                        return;
+                    }
                 }
             }
         }
@@ -86,11 +97,14 @@ namespace Matter3_24
         {
             int length = nums.Length;
             int searchNum = 1000;
-            for (int i = 0; i < length; i++)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-                if (nums[i] == searchNum)
+                for (int i = 0; i < length; i++)
                 {
-                    return;
+                    if (nums[i] == searchNum)
+                    {
+                        return;
+                    }
                 }
             }
         }
@@ -99,11 +113,14 @@ namespace Matter3_24
         {
             int length = nums.Length;
             int searchNum = 5000;
-            for (int i = 0; i < length; i++)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-                if (nums[i] == searchNum)
+                for (int i = 0; i < length; i++)
                 {
-                    return;
+                    if (nums[i] == searchNum)
+                    {
+                        return;
+                    }
                 }
             }
         }
@@ -112,11 +129,14 @@ namespace Matter3_24
         {
             int length = nums.Length;
             int searchNum = 10000;
-            for (int i = 0; i < length; i++)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-                if (nums[i] == searchNum)
+                for (int i = 0; i < length; i++)
                 {
-                    return;
+                    if (nums[i] == searchNum)
+                    {
+                        return;
+                    }
                 }
             }
         }
@@ -125,11 +145,14 @@ namespace Matter3_24
         {
             int length = nums.Length;
             int searchNum = 20000;
-            for (int i = 0; i < length; i++)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-                if (nums[i] == searchNum)
+                for (int i = 0; i < length; i++)
                 {
-                    return;
+                    if (nums[i] == searchNum)
+                    {
+                        return;
+                    }
                 }
             }
         }
@@ -138,11 +161,14 @@ namespace Matter3_24
         {
             int length = nums.Length;
             int searchNum = 30000;
-            for (int i = 0; i < length; i++)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-                if (nums[i] == searchNum)
+                for (int i = 0; i < length; i++)
                 {
-                    return;
+                    if (nums[i] == searchNum)
+                    {
+                        return;
+                    }
                 }
             }
         }
@@ -152,11 +178,14 @@ namespace Matter3_24
         {
             int length = nums.Length;
             int searchNum = 40000;
-            for (int i = 0; i < length; i++)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-                if (nums[i] == searchNum)
+                for (int i = 0; i < length; i++)
                 {
-                    return;
+                    if (nums[i] == searchNum)
+                    {
+                        return;
+                    }
                 }
             }
         }
@@ -165,13 +194,34 @@ namespace Matter3_24
         {
             int length = nums.Length;
             int searchNum = 50000;
-            for (int i = 0; i < length; i++)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-                if (nums[i] == searchNum)
+                for (int i = 0; i < length; i++)
                 {
-                    return;
+                    if (nums[i] == searchNum)
+                    {
+                        return;
+                    }
                 }
             }
+
+        }
+        [Benchmark]
+        public void SequentialSearch60000()
+        {
+            int length = nums.Length;
+            int searchNum = 60000;
+            if (searchNum >= 0 && searchNum <= 50000)
+            {
+                for (int i = 0; i < length; i++)
+                {
+                    if (nums[i] == searchNum)
+                    {
+                        return;
+                    }
+                }
+            }
+                
         }
 
         //이진 탐색 테스트 0,1000,5000,10000,20000,30000,40000,50000
@@ -182,20 +232,23 @@ namespace Matter3_24
             int max = nums[nums.Length - 1];
             int min = nums[0];
             int middle;
-            while (true)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-                middle = (max + min) / 2;
-                if (searchNum == middle)
+                while (true)
                 {
-                    return;
-                }
-                if (searchNum > middle)
-                {
-                    min = middle +1;
-                }
-                else if (searchNum < middle)
-                {
-                    max = middle -1;
+                    middle = (max + min) / 2;
+                    if (searchNum == middle)
+                    {
+                        return;
+                    }
+                    if (searchNum > middle)
+                    {
+                        min = middle + 1;
+                    }
+                    else if (searchNum < middle)
+                    {
+                        max = middle - 1;
+                    }
                 }
             }
         }
@@ -206,20 +259,23 @@ namespace Matter3_24
             int max = nums[nums.Length - 1];
             int min = nums[0];
             int middle;
-            while (true)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-                middle = (max + min) / 2;
-                if (searchNum == middle)
+                while (true)
                 {
-                    return;
-                }
-                if (searchNum > middle)
-                {
-                    min = middle +1;
-                }
-                else if (searchNum < middle)
-                {
-                    max = middle -1;
+                    middle = (max + min) / 2;
+                    if (searchNum == middle)
+                    {
+                        return;
+                    }
+                    if (searchNum > middle)
+                    {
+                        min = middle + 1;
+                    }
+                    else if (searchNum < middle)
+                    {
+                        max = middle - 1;
+                    }
                 }
             }
         }
@@ -230,20 +286,23 @@ namespace Matter3_24
             int max = nums[nums.Length - 1];
             int min = nums[0];
             int middle;
-            while (true)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-                middle = (max + min) / 2;
-                if (searchNum == middle)
+                while (true)
                 {
-                    return;
-                }
-                if (searchNum > middle)
-                {
-                    min = middle +1;
-                }
-                else if (searchNum < middle)
-                {
-                    max = middle -1;
+                    middle = (max + min) / 2;
+                    if (searchNum == middle)
+                    {
+                        return;
+                    }
+                    if (searchNum > middle)
+                    {
+                        min = middle + 1;
+                    }
+                    else if (searchNum < middle)
+                    {
+                        max = middle - 1;
+                    }
                 }
             }
         }
@@ -254,20 +313,23 @@ namespace Matter3_24
             int max = nums[nums.Length - 1];
             int min = nums[0];
             int middle;
-            while (true)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-                middle = (max + min) / 2;
-                if (searchNum == middle)
+                while (true)
                 {
-                    return;
-                }
-                if (searchNum > middle)
-                {
-                    min = middle +1;
-                }
-                else if (searchNum < middle)
-                {
-                    max = middle -1;
+                    middle = (max + min) / 2;
+                    if (searchNum == middle)
+                    {
+                        return;
+                    }
+                    if (searchNum > middle)
+                    {
+                        min = middle + 1;
+                    }
+                    else if (searchNum < middle)
+                    {
+                        max = middle - 1;
+                    }
                 }
             }
         }
@@ -278,20 +340,23 @@ namespace Matter3_24
             int max = nums[nums.Length - 1];
             int min = nums[0];
             int middle;
-            while (true)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-                middle = (max + min) / 2;
-                if (searchNum == middle)
+                while (true)
                 {
-                    return;
-                }
-                if (searchNum > middle)
-                {
-                    min = middle +1;
-                }
-                else if (searchNum < middle)
-                {
-                    max = middle -1;
+                    middle = (max + min) / 2;
+                    if (searchNum == middle)
+                    {
+                        return;
+                    }
+                    if (searchNum > middle)
+                    {
+                        min = middle + 1;
+                    }
+                    else if (searchNum < middle)
+                    {
+                        max = middle - 1;
+                    }
                 }
             }
         }
@@ -302,20 +367,23 @@ namespace Matter3_24
             int max = nums[nums.Length - 1];
             int min = nums[0];
             int middle;
-            while (true)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-                middle = (max + min) / 2;
-                if (searchNum == middle)
+                while (true)
                 {
-                    return;
-                }
-                if (searchNum > middle)
-                {
-                    min = middle +1;
-                }
-                else if (searchNum < middle)
-                {
-                    max = middle -1;
+                    middle = (max + min) / 2;
+                    if (searchNum == middle)
+                    {
+                        return;
+                    }
+                    if (searchNum > middle)
+                    {
+                        min = middle + 1;
+                    }
+                    else if (searchNum < middle)
+                    {
+                        max = middle - 1;
+                    }
                 }
             }
         }
@@ -326,20 +394,23 @@ namespace Matter3_24
             int max = nums[nums.Length - 1];
             int min = nums[0];
             int middle;
-            while (true)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-                middle = (max + min) / 2;
-                if (searchNum == middle)
+                while (true)
                 {
-                    return;
-                }
-                if (searchNum > middle)
-                {
-                    min = middle +1;
-                }
-                else if (searchNum < middle)
-                {
-                    max = middle -1;
+                    middle = (max + min) / 2;
+                    if (searchNum == middle)
+                    {
+                        return;
+                    }
+                    if (searchNum > middle)
+                    {
+                        min = middle + 1;
+                    }
+                    else if (searchNum < middle)
+                    {
+                        max = middle - 1;
+                    }
                 }
             }
         }
@@ -347,23 +418,55 @@ namespace Matter3_24
         public void BinarySearch50000()
         {
             int searchNum = 50000;
+
             int max = nums[nums.Length - 1];
             int min = nums[0];
             int middle;
-            while (true)
+            if (searchNum >= 0 && searchNum <= 50000)
             {
-                middle = (max + min) / 2;
-                if (searchNum == middle)
+                while (true)
                 {
-                    return;
+                    middle = (max + min) / 2;
+                    if (searchNum == middle)
+                    {
+                        return;
+                    }
+                    if (searchNum > middle)
+                    {
+                        min = middle + 1;
+                    }
+                    else if (searchNum < middle)
+                    {
+                        max = middle - 1;
+                    }
                 }
-                if (searchNum > middle)
+            }
+        }
+        [Benchmark]
+        public void BinarySearch60000()
+        {
+            int searchNum = 60000;
+           
+            int max = nums[nums.Length - 1];
+            int min = nums[0];
+            int middle;
+            if (searchNum >= 0 && searchNum <= 50000)
+            {
+                while (true)
                 {
-                    min = middle +1;
-                }
-                else if (searchNum < middle)
-                {
-                    max = middle -1;
+                    middle = (max + min) / 2;
+                    if (searchNum == middle)
+                    {
+                        return;
+                    }
+                    if (searchNum > middle)
+                    {
+                        min = middle + 1;
+                    }
+                    else if (searchNum < middle)
+                    {
+                        max = middle - 1;
+                    }
                 }
             }
         }
