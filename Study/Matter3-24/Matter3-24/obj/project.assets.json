@@ -1586,19 +1586,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FPSGO\\.nuget\\packages\\": {}
+    "C:\\Users\\lkj47\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\unity\\C#Study\\c-Study\\Study\\Matter3-24\\Matter3-24\\Matter3-24.csproj",
+      "projectUniqueName": "C:\\대학교 4학년 1학기\\c-Study\\Study\\Matter3-24\\Matter3-24\\Matter3-24.csproj",
       "projectName": "Matter3-24",
-      "projectPath": "D:\\unity\\C#Study\\c-Study\\Study\\Matter3-24\\Matter3-24\\Matter3-24.csproj",
-      "packagesPath": "C:\\Users\\FPSGO\\.nuget\\packages\\",
-      "outputPath": "D:\\unity\\C#Study\\c-Study\\Study\\Matter3-24\\Matter3-24\\obj\\",
+      "projectPath": "C:\\대학교 4학년 1학기\\c-Study\\Study\\Matter3-24\\Matter3-24\\Matter3-24.csproj",
+      "packagesPath": "C:\\Users\\lkj47\\.nuget\\packages\\",
+      "outputPath": "C:\\대학교 4학년 1학기\\c-Study\\Study\\Matter3-24\\Matter3-24\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\FPSGO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lkj47\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1644,7 +1644,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
