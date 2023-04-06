@@ -25,7 +25,7 @@ namespace Matter3_24
 		public void SequentialSearch()
 		{
 			int length = nums.Length;
-			int searchNum = -1;
+			int searchNum = 15000;
             for (int i = 0; i < length; i++)
             {
                 if (nums[i] == searchNum)
@@ -34,438 +34,92 @@ namespace Matter3_24
                     return;
                 }
             }
-            
+            Console.WriteLine("값이 없읍니다.");
 		}
 		public void BinarySearch()
         {
-			int searchNum = 60000;
-          
-
-            int max = nums[nums.Length-1];
-			int min = nums[0];
-			int middle;
-
-            while (true)
+			int searchNum = 15000;
+            int max = nums.Length - 1;
+            int min = 0;
+            // 간단 한 조건문일 경우 while 안에 넣어 가독성을 높인다.
+            while (min >= max)
             {
+                int middle = nums[(max+min)/2];// 컴파일러에서 최적화를 해줘 여기서 반복 선언해도 문제없다.
                 middle = (max + min) / 2;
-                if (searchNum == middle)
-                {
-                    Console.WriteLine("찾았습니다." + middle);
-                    return;
-                }
-                
-
+                // else if를 활용하여 조건 확인 횟수를 줄인다.
                 if (searchNum > middle)
                 {
                     Console.WriteLine($"최소 {min} 최대 {max} 중간{middle}");
                     min = middle + 1;
-
                 }
                 else if (searchNum < middle)
                 {
                     Console.WriteLine($"최소 {min} 최대 {max} 중간{middle}");
                     max = middle - 1;
                 }
+                else if (searchNum == middle)
+                {
+                    Console.WriteLine("찾았습니다." + middle);
+                    return;
+                }
 
             }
-            
-                
+            Console.WriteLine("값이 없습니다.");
+
         }
-
-        //순차 탐색 0,1000,5000,10000,20000,30000,40000,50000
-
-        //[Benchmark]
-        //public void SequentialSearch0()
-        //{
-        //    int length = nums.Length;
-        //    int searchNum = 0;
-        //    if (searchNum >= 0 && searchNum <= 50000)
-        //    {
-        //        for (int i = 0; i < length; i++)
-        //        {
-        //            if (nums[i] == searchNum)
-        //            {
-        //                return;
-        //            }
-        //        }
-        //    }
-        //}
-        //[Benchmark]
-        //public void SequentialSearch1000()
-        //{
-        //    int length = nums.Length;
-        //    int searchNum = 1000;
-        //    if (searchNum >= 0 && searchNum <= 50000)
-        //    {
-        //        for (int i = 0; i < length; i++)
-        //        {
-        //            if (nums[i] == searchNum)
-        //            {
-        //                return;
-        //            }
-        //        }
-        //    }
-        //}
-        //[Benchmark]
-        //public void SequentialSearch5000()
-        //{
-        //    int length = nums.Length;
-        //    int searchNum = 5000;
-        //    if (searchNum >= 0 && searchNum <= 50000)
-        //    {
-        //        for (int i = 0; i < length; i++)
-        //        {
-        //            if (nums[i] == searchNum)
-        //            {
-        //                return;
-        //            }
-        //        }
-        //    }
-        //}
-        //[Benchmark]
-        //public void SequentialSearch10000()
-        //{
-        //    int length = nums.Length;
-        //    int searchNum = 10000;
-        //    if (searchNum >= 0 && searchNum <= 50000)
-        //    {
-        //        for (int i = 0; i < length; i++)
-        //        {
-        //            if (nums[i] == searchNum)
-        //            {
-        //                return;
-        //            }
-        //        }
-        //    }
-        //}
-        //[Benchmark]
-        //public void SequentialSearch20000()
-        //{
-        //    int length = nums.Length;
-        //    int searchNum = 20000;
-        //    if (searchNum >= 0 && searchNum <= 50000)
-        //    {
-        //        for (int i = 0; i < length; i++)
-        //        {
-        //            if (nums[i] == searchNum)
-        //            {
-        //                return;
-        //            }
-        //        }
-        //    }
-        //}
-        //[Benchmark]
-        //public void SequentialSearch30000()
-        //{
-        //    int length = nums.Length;
-        //    int searchNum = 30000;
-        //    if (searchNum >= 0 && searchNum <= 50000)
-        //    {
-        //        for (int i = 0; i < length; i++)
-        //        {
-        //            if (nums[i] == searchNum)
-        //            {
-        //                return;
-        //            }
-        //        }
-        //    }
-        //}
-
-        //[Benchmark]
-        //public void SequentialSearch40000()
-        //{
-        //    int length = nums.Length;
-        //    int searchNum = 40000;
-        //    if (searchNum >= 0 && searchNum <= 50000)
-        //    {
-        //        for (int i = 0; i < length; i++)
-        //        {
-        //            if (nums[i] == searchNum)
-        //            {
-        //                return;
-        //            }
-        //        }
-        //    }
-        //}
-        [Benchmark]
-        public void SequentialSearch50000()
+        // 함수를 따로 꺼내둔다.
+        public void SequentialSearch(int searchNum)
         {
             int length = nums.Length;
-            int searchNum = 50000;
-            if (searchNum >= 0 && searchNum <= 50000)
+            for (int i = 0; i < length; i++)
             {
-                for (int i = 0; i < length; i++)
+                if (nums[i] == searchNum)
                 {
-                    if (nums[i] == searchNum)
-                    {
-                        return;
-                    }
+                    return;
                 }
-            }
-
+            } 
         }
-        [Benchmark]
-        public void SequentialSearch60000()
+        public void BinarySearch(int searchNum)
         {
-            int length = nums.Length;
-            int searchNum = 60000;
-            if (searchNum >= 0 && searchNum <= 50000)
+            int max = nums.Length - 1;
+            int min = 0;
+            while (min >= max)
             {
-                for (int i = 0; i < length; i++)
-                {
-                    if (nums[i] == searchNum)
-                    {
-                        return;
-                    }
-                }
+                int middle = nums[(max + min) / 2];
+                middle = (max + min) / 2;
+                if (searchNum > middle)
+                    min = middle + 1;
+                else if (searchNum < middle)
+                    max = middle - 1;
+                else if (searchNum == middle)
+                    return;
             }
         }
-
-        ////이진 탐색 테스트 0,1000,5000,10000,20000,30000,40000,50000
-        //[Benchmark]
-        //public void BinarySearch0()
-        //{
-        //    int searchNum = 0;
-        //    int max = nums[nums.Length - 1];
-        //    int min = nums[0];
-        //    int middle;
-        //    if (searchNum >= 0 && searchNum <= 50000)
-        //    {
-        //        while (true)
-        //        {
-        //            middle = (max + min) / 2;
-        //            if (searchNum == middle)
-        //            {
-        //                return;
-        //            }
-        //            if (searchNum > middle)
-        //            {
-        //                min = middle + 1;
-        //            }
-        //            else if (searchNum < middle)
-        //            {
-        //                max = middle - 1;
-        //            }
-        //        }
-        //    }
-        //}
-        //[Benchmark]
-        //public void BinarySearch1000()
-        //{
-        //    int searchNum = 1000;
-        //    int max = nums[nums.Length - 1];
-        //    int min = nums[0];
-        //    int middle;
-        //    if (searchNum >= 0 && searchNum <= 50000)
-        //    {
-        //        while (true)
-        //        {
-        //            middle = (max + min) / 2;
-        //            if (searchNum == middle)
-        //            {
-        //                return;
-        //            }
-        //            if (searchNum > middle)
-        //            {
-        //                min = middle + 1;
-        //            }
-        //            else if (searchNum < middle)
-        //            {
-        //                max = middle - 1;
-        //            }
-        //        }
-        //    }
-        //}
-        //[Benchmark]
-        //public void BinarySearch5000()
-        //{
-        //    int searchNum = 5000;
-        //    int max = nums[nums.Length - 1];
-        //    int min = nums[0];
-        //    int middle;
-        //    if (searchNum >= 0 && searchNum <= 50000)
-        //    {
-        //        while (true)
-        //        {
-        //            middle = (max + min) / 2;
-        //            if (searchNum == middle)
-        //            {
-        //                return;
-        //            }
-        //            if (searchNum > middle)
-        //            {
-        //                min = middle + 1;
-        //            }
-        //            else if (searchNum < middle)
-        //            {
-        //                max = middle - 1;
-        //            }
-        //        }
-        //    }
-        //}
-        //[Benchmark]
-        //public void BinarySearch10000()
-        //{
-        //    int searchNum = 10000;
-        //    int max = nums[nums.Length - 1];
-        //    int min = nums[0];
-        //    int middle;
-        //    if (searchNum >= 0 && searchNum <= 50000)
-        //    {
-        //        while (true)
-        //        {
-        //            middle = (max + min) / 2;
-        //            if (searchNum == middle)
-        //            {
-        //                return;
-        //            }
-        //            if (searchNum > middle)
-        //            {
-        //                min = middle + 1;
-        //            }
-        //            else if (searchNum < middle)
-        //            {
-        //                max = middle - 1;
-        //            }
-        //        }
-        //    }
-        //}
-        //[Benchmark]
-        //public void BinarySearch20000()
-        //{
-        //    int searchNum = 20000;
-        //    int max = nums[nums.Length - 1];
-        //    int min = nums[0];
-        //    int middle;
-        //    if (searchNum >= 0 && searchNum <= 50000)
-        //    {
-        //        while (true)
-        //        {
-        //            middle = (max + min) / 2;
-        //            if (searchNum == middle)
-        //            {
-        //                return;
-        //            }
-        //            if (searchNum > middle)
-        //            {
-        //                min = middle + 1;
-        //            }
-        //            else if (searchNum < middle)
-        //            {
-        //                max = middle - 1;
-        //            }
-        //        }
-        //    }
-        //}
-        //[Benchmark]
-        //public void BinarySearch30000()
-        //{
-        //    int searchNum = 30000;
-        //    int max = nums[nums.Length - 1];
-        //    int min = nums[0];
-        //    int middle;
-        //    if (searchNum >= 0 && searchNum <= 50000)
-        //    {
-        //        while (true)
-        //        {
-        //            middle = (max + min) / 2;
-        //            if (searchNum == middle)
-        //            {
-        //                return;
-        //            }
-        //            if (searchNum > middle)
-        //            {
-        //                min = middle + 1;
-        //            }
-        //            else if (searchNum < middle)
-        //            {
-        //                max = middle - 1;
-        //            }
-        //        }
-        //    }
-        //}
-        //[Benchmark]
-        //public void BinarySearch40000()
-        //{
-        //    int searchNum = 40000;
-        //    int max = nums[nums.Length - 1];
-        //    int min = nums[0];
-        //    int middle;
-        //    if (searchNum >= 0 && searchNum <= 50000)
-        //    {
-        //        while (true)
-        //        {
-        //            middle = (max + min) / 2;
-        //            if (searchNum == middle)
-        //            {
-        //                return;
-        //            }
-        //            if (searchNum > middle)
-        //            {
-        //                min = middle + 1;
-        //            }
-        //            else if (searchNum < middle)
-        //            {
-        //                max = middle - 1;
-        //            }
-        //        }
-        //    }
-        //}
+        //|               Method |        Mean |     Error |    StdDev | Allocated |
+        //|--------------------- |------------:|----------:|----------:|----------:|
+        //|   SequentialSearch10 |   5.9077 ns | 0.0459 ns | 0.0430 ns |         - |
+        //| SequentialSearch1000 | 541.6304 ns | 4.0965 ns | 3.6314 ns |         - |
+        //|       BinarySearch10 |   0.7746 ns | 0.0299 ns | 0.0279 ns |         - |
+        //|    BinarySearch10000 |   0.7725 ns | 0.0064 ns | 0.0060 ns |         - |
         [Benchmark]
-        public void BinarySearch50000()
+        public void SequentialSearch10()
         {
-            int searchNum = 50000;
-
-            int max = nums[nums.Length - 1];
-            int min = nums[0];
-            int middle;
-            if (searchNum >= 0 && searchNum <= 50000)
-            {
-                while (true)
-                {
-                    middle = (max + min) / 2;
-                    if (searchNum == middle)
-                    {
-                        return;
-                    }
-                    if (searchNum > middle)
-                    {
-                        min = middle + 1;
-                    }
-                    else if (searchNum < middle)
-                    {
-                        max = middle - 1;
-                    }
-                }
-            }
+            SequentialSearch(10);
         }
         [Benchmark]
-        public void BinarySearch60000()
+        public void SequentialSearch1000()
         {
-            int searchNum = 60000;
-           
-            int max = nums[nums.Length - 1];
-            int min = nums[0];
-            int middle;
-            if (searchNum >= 0 && searchNum <= 50000)
-            {
-                while (true)
-                {
-                    middle = (max + min) / 2;
-                    if (searchNum == middle)
-                    {
-                        return;
-                    }
-                    if (searchNum > middle)
-                    {
-                        min = middle + 1;
-                    }
-                    else if (searchNum < middle)
-                    {
-                        max = middle - 1;
-                    }
-                }
-            }
+            SequentialSearch(1000);
+        }
+        [Benchmark]
+        public void BinarySearch10()
+        {
+            BinarySearch(10);
+        }
+        [Benchmark]
+        public void BinarySearch10000()
+        {
+            BinarySearch(10000);
         }
     }
 

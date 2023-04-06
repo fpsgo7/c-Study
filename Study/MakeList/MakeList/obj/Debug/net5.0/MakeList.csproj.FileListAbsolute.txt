@@ -1,0 +1,16 @@
+D:\unity\C#Study\c-Study\Study\MakeList\MakeList\bin\Debug\net5.0\MakeList.exe
+D:\unity\C#Study\c-Study\Study\MakeList\MakeList\bin\Debug\net5.0\MakeList.deps.json
+D:\unity\C#Study\c-Study\Study\MakeList\MakeList\bin\Debug\net5.0\MakeList.runtimeconfig.json
+D:\unity\C#Study\c-Study\Study\MakeList\MakeList\bin\Debug\net5.0\MakeList.runtimeconfig.dev.json
+D:\unity\C#Study\c-Study\Study\MakeList\MakeList\bin\Debug\net5.0\MakeList.dll
+D:\unity\C#Study\c-Study\Study\MakeList\MakeList\bin\Debug\net5.0\ref\MakeList.dll
+D:\unity\C#Study\c-Study\Study\MakeList\MakeList\bin\Debug\net5.0\MakeList.pdb
+D:\unity\C#Study\c-Study\Study\MakeList\MakeList\obj\Debug\net5.0\MakeList.csproj.AssemblyReference.cache
+D:\unity\C#Study\c-Study\Study\MakeList\MakeList\obj\Debug\net5.0\MakeList.GeneratedMSBuildEditorConfig.editorconfig
+D:\unity\C#Study\c-Study\Study\MakeList\MakeList\obj\Debug\net5.0\MakeList.AssemblyInfoInputs.cache
+D:\unity\C#Study\c-Study\Study\MakeList\MakeList\obj\Debug\net5.0\MakeList.AssemblyInfo.cs
+D:\unity\C#Study\c-Study\Study\MakeList\MakeList\obj\Debug\net5.0\MakeList.csproj.CoreCompileInputs.cache
+D:\unity\C#Study\c-Study\Study\MakeList\MakeList\obj\Debug\net5.0\MakeList.dll
+D:\unity\C#Study\c-Study\Study\MakeList\MakeList\obj\Debug\net5.0\ref\MakeList.dll
+D:\unity\C#Study\c-Study\Study\MakeList\MakeList\obj\Debug\net5.0\MakeList.pdb
+D:\unity\C#Study\c-Study\Study\MakeList\MakeList\obj\Debug\net5.0\MakeList.genruntimeconfig.cache

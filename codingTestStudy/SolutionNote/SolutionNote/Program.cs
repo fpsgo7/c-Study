@@ -1,44 +1,36 @@
 ﻿using System;
+using System.IO;
+using System.Text;
 
 namespace SolutionNote
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-			string[] choose = Console.ReadLine().Split();
-			int basketCount = int.Parse(choose[0])+1;
-			int count = int.Parse(choose[1]);
-			int[] basket = new int[basketCount];
-			int[] newBasket = new int[basketCount];
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            // 출력과 입력을 최적화 하기위한 객체 미리 생성
+            StreamReader reader = new StreamReader(Console.OpenStandardInput());
+            StreamWriter writer = new StreamWriter(Console.OpenStandardOutput());
+            int count =int.Parse(reader.ReadLine());
+            int line = 0;
+            int end = 0;
+            int different = 0;
 
-			for(int i = 1; i<basket.Length; i++)
+            while(count > end)
             {
-				basket[i] = i;
+                line += 1;
+                end += line;
             }
-			while(count-- > 0)
-            {
-				string[] choose2 = Console.ReadLine().Split();
-				int startN = int.Parse(choose2[0]);
-				int endN = int.Parse(choose2[1]);
-				int middleN = int.Parse(choose2[2]);
-				for(int i = startN; i <= endN; i++)
-                {
-					newBasket[i] = basket[(i + middleN - 2 * startN)
-						% (endN - startN+1) + startN];
-
-                }
-				for(int i = startN; i<= endN; i++)
-                {
-					basket[i] = newBasket[i];
-                }
-
-			}
-			for (int i = 1; i < basket.Length; i++)
-			{
-				Console.Write(basket[i]+" ");
-			}
-		}
-	}
+            different = end - count;
+            if (line % 2 == 0)// 짝수 라인
+                writer.WriteLine((line - different) + "/" + (different + 1));
+            else
+                writer.WriteLine((different + 1) + "/" + (line - different));
+            writer.Close();
+            reader.Close();
+        }
+       
+    }
 }
 

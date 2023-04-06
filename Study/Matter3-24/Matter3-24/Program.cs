@@ -9,9 +9,11 @@ namespace Matter3_24
     {
         static void Main(string[] args)
         {
-            Search s = new Search();
-            s.BinarySearch();
-            //BenchmarkRunner.Run<Search>();
+            //Search s = new Search();
+            //s.SequentialSearch();
+            //s.BinarySearch();
+
+            BenchmarkRunner.Run<Search>();
             //BenchmarkRunner.Run<TimewatchTest>();
 
         }
