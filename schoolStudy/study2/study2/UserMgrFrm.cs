@@ -11,29 +11,54 @@ using System.Windows.Forms;
 using System.IO;
 using System.Runtime.InteropServices;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.Collections;
 
 namespace study2
 {
     public partial class UserMgrFrm : Form
     {
+        DBHelper dbHelper = DBHelper.getInstance();
         private static readonly Color SELECTED_COLOR = Color.FromArgb(0, 120, 215);
 
         public UserMgrFrm()
         {
             InitializeComponent();
-
         }
-
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            string sql = "select * from testTable where name like '%" + nameTxt.Text + "%'";
+            MessageBox.Show(sql);
+            ArrayList list = dbHelper.executeReader(sql);
+            totalLv.Items.Clear();
+            foreach (string[] values in list)
+            {
+                ListViewItem item = new ListViewItem(values);
+                UserVO userVO = new UserVO(values);
+                item.Tag = userVO;
+                totalLv.Items.Add(item);
+            }
+        }
         private void insertBtn_Click(object sender, EventArgs e)
         {
-            string[] values = new string[3];
-            values[0] = this.numTxt.Text;
-            values[1] = this.nameTxt.Text;
-            values[2] = this.contactTxt.Text;
-            ListViewItem item = new ListViewItem(values);
-            this.Tag = new UserVO(values);
-            this.totalLv.Items.Add(item);
-            item.Tag = new UserVO(values);
+            //기본 추가기능
+            //string[] values = new string[3];
+            //values[0] = this.numTxt.Text;
+            //values[1] = this.nameTxt.Text;
+            //values[2] = this.contactTxt.Text;
+            //ListViewItem item = new ListViewItem(values);
+            //this.Tag = new UserVO(values);
+            //this.totalLv.Items.Add(item);
+            //item.Tag = new UserVO(values);
+
+            // 데이터베이스 일겨우
+            string sql = "INSERT INTO testTable ( name, contact) " +
+                $"values('{this.nameTxt.Text.ToString()}','{this.contactTxt.Text.ToString()}')";
+            MessageBox.Show(sql);
+            dbHelper.ExecuteNonQuery(sql);
+            // 추가된 걸 확인하기 
+            this.nameTxt.Text = string.Empty;
+            this.contactTxt.Text = string.Empty;
+            this.searchBtn.PerformClick();
         }
 
         private void UpdateBtn_Click(object sender, EventArgs e)
@@ -41,20 +66,28 @@ namespace study2
             if (this.totalLv.SelectedIndices == null ||
                 this.totalLv.SelectedIndices.Count < 1)
                 return;
-            string[] values = new string[3];
-            values[0] = this.numTxt.Text;
-            values[1] = this.nameTxt.Text;
-            values[2] = this.contactTxt.Text;
+            //string[] values = new string[3];
+            //values[0] = this.numTxt.Text;
+            //values[1] = this.nameTxt.Text;
+            //values[2] = this.contactTxt.Text;
 
-            int selectedIndex = this.totalLv.SelectedIndices[0];
-            UserVO userVO = (UserVO)this.totalLv.Items[selectedIndex].Tag;
-            this.totalLv.Items[selectedIndex] = new ListViewItem(values);
-            userVO.Order = values[0];
-            userVO.Name = values[1];
-            userVO.Contact = values[2];
-            this.totalLv.Items[selectedIndex].Tag = userVO;
-
-            SetListViewSelectColor();
+            //int selectedIndex = this.totalLv.SelectedIndices[0];
+            //UserVO userVO = (UserVO)this.totalLv.Items[selectedIndex].Tag;
+            //this.totalLv.Items[selectedIndex] = new ListViewItem(values);
+            //userVO.Order = values[0];
+            //userVO.Name = values[1];
+            //userVO.Contact = values[2];
+            //this.totalLv.Items[selectedIndex].Tag = userVO;
+            string sql = "UPDATE testTable " +
+                $"SET name = '{this.nameTxt.Text.ToString()}' , contact = '{this.contactTxt.Text.ToString()}'  " +
+                $"WHERE id = {this.totalLv.SelectedIndices[0]+1}";
+            MessageBox.Show(sql);
+            dbHelper.ExecuteNonQuery(sql);
+            // 추가된 걸 확인하기 
+            this.nameTxt.Text = string.Empty;
+            this.contactTxt.Text = string.Empty;
+            this.searchBtn.PerformClick();
+            //SetListViewSelectColor();
         }
         //리스트의  FullRowSelect 설정을 true 해야한다.
         //
@@ -82,7 +115,16 @@ namespace study2
             if (this.totalLv.SelectedIndices == null ||
               this.totalLv.SelectedIndices.Count < 1)
                 return;
-            this.totalLv.Items.RemoveAt(this.totalLv.SelectedIndices[0]);
+            //this.totalLv.Items.RemoveAt(this.totalLv.SelectedIndices[0]);
+            // 데이터 베이스 용
+            string sql = $"DELETE FROM testTable " +
+                $"WHERE id={this.totalLv.SelectedIndices[0] + 1}";
+            MessageBox.Show(sql);
+            dbHelper.ExecuteNonQuery(sql);
+            // 추가된 걸 확인하기 
+            this.nameTxt.Text = string.Empty;
+            this.contactTxt.Text = string.Empty;
+            this.searchBtn.PerformClick();
         }
 
         private void SetListViewSelectColor()
@@ -103,48 +145,49 @@ namespace study2
 
 
         }
-        // 액셀 관련
+        //액셀 관련
         private void UserMgrFrm_Shown(object sender, EventArgs e)
         {
+            this.searchBtn.PerformClick();
             //MessageBox.Show(System.Environment.CurrentDirectory);
             // D:\Projects\MyShop\bin\Debug
-            Excel.Application excelApp = null;
-            Excel.Workbook workBook = null;
-            Excel.Worksheet workSheet = null;
-            try
-            {
-                string currentPath =@"C:\대학교 4학년 1학기\c-Study\schoolStudy\study2";// 파일경로 저장한 곳에 둘것
-                // Environment.GetFolderPath(Environment.SpecialFolder.Desktop);  // 바탕화면 경로
-                string path = Path.Combine(currentPath, "myshop.xlsx");
-                excelApp = new Excel.Application();
-                workBook = excelApp.Workbooks.Open(path);
-                workSheet = workBook.Worksheets.get_Item(1) as Excel.Worksheet;
-                Excel.Range range = workSheet.UsedRange;
-                //MessageBox.Show(range.Rows.Count + ","+ range.Columns.Count);
-                for (int row = 2; row <= range.Rows.Count; row++)
-                {
-                    string[] cellValues = new string[range.Columns.Count];
-                    for (int column = 1; column <= range.Columns.Count; column++)
-                    {
-                        string str = "" + (range.Cells[row, column] as Excel.Range).Value2;
-                        cellValues[column - 1] = str;
-                    }
-                    UserVO userVO = new UserVO(cellValues);
-                    ListViewItem item = new ListViewItem(cellValues);
-                    item.Tag = userVO;
-                    this.totalLv.Items.Add(item); ;
-                }
-                workBook.Close(true);
-                excelApp.Quit();
-            }
-            finally
-            {
-                ReleaseObject(workSheet);
-                ReleaseObject(workBook);
-                ReleaseObject(excelApp);
-            }
+            //Excel.Application excelApp = null;
+            //Excel.Workbook workBook = null;
+            //Excel.Worksheet workSheet = null;
+            //try
+            //{
+            //    string currentPath = @"C:\대학교 4학년 1학기\c-Study\schoolStudy\study2";// 파일경로 저장한 곳에 둘것
+            //    // Environment.GetFolderPath(Environment.SpecialFolder.Desktop);  // 바탕화면 경로
+            //    string path = Path.Combine(currentPath, "myshop.xlsx");
+            //    excelApp = new Excel.Application();
+            //    workBook = excelApp.Workbooks.Open(path);
+            //    workSheet = workBook.Worksheets.get_Item(1) as Excel.Worksheet;
+            //    Excel.Range range = workSheet.UsedRange;
+            //    //MessageBox.Show(range.Rows.Count + ","+ range.Columns.Count);
+            //    for (int row = 2; row <= range.Rows.Count; row++)
+            //    {
+            //        string[] cellValues = new string[range.Columns.Count];
+            //        for (int column = 1; column <= range.Columns.Count; column++)
+            //        {
+            //            string str = "" + (range.Cells[row, column] as Excel.Range).Value2;
+            //            cellValues[column - 1] = str;
+            //        }
+            //        UserVO userVO = new UserVO(cellValues);
+            //        ListViewItem item = new ListViewItem(cellValues);
+            //        item.Tag = userVO;
+            //        this.totalLv.Items.Add(item); ;
+            //    }
+            //    workBook.Close(true);
+            //    excelApp.Quit();
+            //}
+            //finally
+            //{
+            //    ReleaseObject(workSheet);
+            //    ReleaseObject(workBook);
+            //    ReleaseObject(excelApp);
+            //}
         }
-        // 액셀 파일을 사용한후 마무리용 함수
+        //액셀 파일을 사용한후 마무리용 함수
         static void ReleaseObject(object obj)
         {
             try
@@ -205,5 +248,12 @@ namespace study2
             }
 
         }
+
+        private void UserMgrFrm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            dbHelper.closeConnection();
+        }
+
+       
     }
 }

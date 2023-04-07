@@ -32,7 +32,7 @@ namespace study2
             this.numTxt = new System.Windows.Forms.TextBox();
             this.contactTxt = new System.Windows.Forms.TextBox();
             this.nameTxt = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.searchBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.totalLv = new System.Windows.Forms.ListView();
@@ -54,10 +54,10 @@ namespace study2
             this.numTxt.TabIndex = 1;
             this.numTxt.TextChanged += new System.EventHandler(this.numTxt_TextChanged);
             // 
-            // telNumberTxt
+            // contactTxt
             // 
             this.contactTxt.Location = new System.Drawing.Point(146, 107);
-            this.contactTxt.Name = "telNumberTxt";
+            this.contactTxt.Name = "contactTxt";
             this.contactTxt.Size = new System.Drawing.Size(100, 25);
             this.contactTxt.TabIndex = 3;
             // 
@@ -68,14 +68,15 @@ namespace study2
             this.nameTxt.Size = new System.Drawing.Size(100, 25);
             this.nameTxt.TabIndex = 5;
             // 
-            // button1
+            // searchBtn
             // 
-            this.button1.Location = new System.Drawing.Point(42, 165);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 40);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "검색";
-            this.button1.UseVisualStyleBackColor = true;
+            this.searchBtn.Location = new System.Drawing.Point(42, 165);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(118, 40);
+            this.searchBtn.TabIndex = 12;
+            this.searchBtn.Text = "검색";
+            this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // label1
             // 
@@ -186,12 +187,13 @@ namespace study2
             this.Controls.Add(this.totalLv);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.nameTxt);
             this.Controls.Add(this.contactTxt);
             this.Controls.Add(this.numTxt);
             this.Name = "UserMgrFrm";
             this.Text = "UserMgrFrm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserMgrFrm_FormClosing);
             this.Shown += new System.EventHandler(this.UserMgrFrm_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -202,7 +204,7 @@ namespace study2
         private System.Windows.Forms.TextBox numTxt;
         private System.Windows.Forms.TextBox contactTxt;
         private System.Windows.Forms.TextBox nameTxt;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListView totalLv;
