@@ -1,0 +1,16 @@
+D:\unity\C#Study\c-Study\Study\ThreadStudy\ThreadStudy\bin\Debug\net5.0\ThreadStudy.exe
+D:\unity\C#Study\c-Study\Study\ThreadStudy\ThreadStudy\bin\Debug\net5.0\ThreadStudy.deps.json
+D:\unity\C#Study\c-Study\Study\ThreadStudy\ThreadStudy\bin\Debug\net5.0\ThreadStudy.runtimeconfig.json
+D:\unity\C#Study\c-Study\Study\ThreadStudy\ThreadStudy\bin\Debug\net5.0\ThreadStudy.runtimeconfig.dev.json
+D:\unity\C#Study\c-Study\Study\ThreadStudy\ThreadStudy\bin\Debug\net5.0\ThreadStudy.dll
+D:\unity\C#Study\c-Study\Study\ThreadStudy\ThreadStudy\bin\Debug\net5.0\ref\ThreadStudy.dll
+D:\unity\C#Study\c-Study\Study\ThreadStudy\ThreadStudy\bin\Debug\net5.0\ThreadStudy.pdb
+D:\unity\C#Study\c-Study\Study\ThreadStudy\ThreadStudy\obj\Debug\net5.0\ThreadStudy.csproj.AssemblyReference.cache
+D:\unity\C#Study\c-Study\Study\ThreadStudy\ThreadStudy\obj\Debug\net5.0\ThreadStudy.GeneratedMSBuildEditorConfig.editorconfig
+D:\unity\C#Study\c-Study\Study\ThreadStudy\ThreadStudy\obj\Debug\net5.0\ThreadStudy.AssemblyInfoInputs.cache
+D:\unity\C#Study\c-Study\Study\ThreadStudy\ThreadStudy\obj\Debug\net5.0\ThreadStudy.AssemblyInfo.cs
+D:\unity\C#Study\c-Study\Study\ThreadStudy\ThreadStudy\obj\Debug\net5.0\ThreadStudy.csproj.CoreCompileInputs.cache
+D:\unity\C#Study\c-Study\Study\ThreadStudy\ThreadStudy\obj\Debug\net5.0\ThreadStudy.dll
+D:\unity\C#Study\c-Study\Study\ThreadStudy\ThreadStudy\obj\Debug\net5.0\ref\ThreadStudy.dll
+D:\unity\C#Study\c-Study\Study\ThreadStudy\ThreadStudy\obj\Debug\net5.0\ThreadStudy.pdb
+D:\unity\C#Study\c-Study\Study\ThreadStudy\ThreadStudy\obj\Debug\net5.0\ThreadStudy.genruntimeconfig.cache
