@@ -80,7 +80,7 @@ namespace study2
             //this.totalLv.Items[selectedIndex].Tag = userVO;
             string sql = "UPDATE testTable " +
                 $"SET name = '{this.nameTxt.Text.ToString()}' , contact = '{this.contactTxt.Text.ToString()}'  " +
-                $"WHERE id = {this.totalLv.SelectedIndices[0]+1}";
+                $"WHERE id = {this.numTxt.Text.ToString()}";
             MessageBox.Show(sql);
             dbHelper.ExecuteNonQuery(sql);
             // 추가된 걸 확인하기 
@@ -118,7 +118,7 @@ namespace study2
             //this.totalLv.Items.RemoveAt(this.totalLv.SelectedIndices[0]);
             // 데이터 베이스 용
             string sql = $"DELETE FROM testTable " +
-                $"WHERE id={this.totalLv.SelectedIndices[0] + 1}";
+                $"WHERE id={this.numTxt.Text.ToString()}";
             MessageBox.Show(sql);
             dbHelper.ExecuteNonQuery(sql);
             // 추가된 걸 확인하기 
