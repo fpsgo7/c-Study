@@ -1,36 +1,44 @@
 ﻿using System;
-using System.IO;
-using System.Text;
 
 namespace SolutionNote
 {
     class Program
     {
-        
+        // x,y 좌표의 각 최대 최소 값을 구하여 넓이를 구한다.
         static void Main(string[] args)
         {
-            // 출력과 입력을 최적화 하기위한 객체 미리 생성
-            StreamReader reader = new StreamReader(Console.OpenStandardInput());
-            StreamWriter writer = new StreamWriter(Console.OpenStandardOutput());
-            int count =int.Parse(reader.ReadLine());
-            int line = 0;
-            int end = 0;
-            int different = 0;
-
-            while(count > end)
+            int[] lengths = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+            int max=0;
+            int j = 0;
+            int[] otherLength = new int[2];
+            for(int i =0; i<3; i++)
             {
-                line += 1;
-                end += line;
+               
+                if(max < lengths[i])
+                {
+                    if(max != 0)
+                    {
+                        otherLength[j] = max;
+                        j++;
+                        max = lengths[i];
+                    }
+                    max = lengths[i];
+                }
+                else
+                {   
+                    otherLength[j] = lengths[i];
+                    j++;
+                }
             }
-            different = end - count;
-            if (line % 2 == 0)// 짝수 라인
-                writer.WriteLine((line - different) + "/" + (different + 1));
+            if(max < otherLength[0] + otherLength[1])
+            {
+                Console.WriteLine(otherLength[0] + otherLength[1] + max);
+            }
             else
-                writer.WriteLine((different + 1) + "/" + (line - different));
-            writer.Close();
-            reader.Close();
+            {
+                Console.WriteLine(otherLength[0] + otherLength[1] + (otherLength[0] + otherLength[1] - 1));
+            }
         }
-       
     }
 }
 

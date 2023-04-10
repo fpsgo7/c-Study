@@ -31,7 +31,7 @@ namespace MakeList
             count++;// 노드 길이값 추가
         }
         //노드 추가
-        public void Add(int data)
+        public void InsertLast(int data)
         {
             Node node = new Node(data);
             // 만약 생서되는 노드가 첫 노드일경우
@@ -53,6 +53,21 @@ namespace MakeList
                 lastNode = lastNode.next;
             }
             return lastNode;
+        }
+        //인덱스로 노드 찾기
+        public int GetFindNode(int index)
+        {
+            Node currentNode = head;// 해드에서 시작한다.
+            // 첫번째 노드 검사
+            if (index == 0)
+            {
+                return currentNode.data;
+            }
+            for(int i=1; i<index; i++)
+            {
+                currentNode = currentNode.next;
+            }
+            return currentNode.data;
         }
         public void DeleteFirstNode()
         {
@@ -133,6 +148,24 @@ namespace MakeList
         public int GetCount()
         {
             return count;
+        }
+        public void Reverse()
+        {
+            
+            Node previousNode = null;
+            Node currentNode = head;
+            Node nextNode = null;
+          
+
+            while (currentNode != null)
+            {
+                nextNode = currentNode.next;// 다음 노드를 가리킬 값에 현제 노드의 다음값을 넣음
+                currentNode.next = previousNode;// 현제 노드의 다음 값을 이전노드로 가리킴
+                previousNode = currentNode;// 이전 노드는 현제 노드가 되고
+                currentNode = nextNode;//현제노든는 다음노드가 됨
+            }
+           
+            head = previousNode;
         }
     }
 }
