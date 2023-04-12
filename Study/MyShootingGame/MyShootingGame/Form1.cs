@@ -13,6 +13,9 @@ namespace MyShootingGame
 {
     public partial class Form1 : Form
     {
+        //리소스를 관리하는 클래스 만들기
+        //배경을 움직이는 클래스를 따로 만든다. 랜더큐 참고
+        //플레이어 를 관리하는 클래스를 따로만든다.
         Image backgroundImage; // 배경 이미지
         Image playerSourceImage; // 플레이어 이미지
         Bitmap playerImage;//사용할 플레이어 이미지
