@@ -16,43 +16,31 @@ namespace MyShootingGame
         //리소스를 관리하는 클래스 만들기
         //배경을 움직이는 클래스를 따로 만든다. 랜더큐 참고
         //플레이어 를 관리하는 클래스를 따로만든다.
-        Image backgroundImage; // 배경 이미지
-        Image playerSourceImage; // 플레이어 이미지
-        Bitmap playerImage;//사용할 플레이어 이미지
-        int backgroundImageWidth; // 이미지 폭
-        int backgroundImageHeight; // 이미지 높이
-        int backgroundImageX; // 배경 위치
-        int playerX, playerY; //플레이어 위치
-        Thread backgroundThread;
+        
+        
         public Form1()
         {
             InitializeComponent();
-            backgroundImage = Image.FromFile(@"C:\Users\FPSGO\Pictures\Saved Pictures\트루엔딩.PNG");
-            playerSourceImage = Image.FromFile(@"C:\Users\FPSGO\Pictures\Saved Pictures\new.JPG");
-            Size playerSize = new Size(100, 100);
-            playerImage = new Bitmap(playerSourceImage, playerSize);
-
-            backgroundImageWidth = backgroundImage.Width;
-            backgroundImageHeight = backgroundImage.Height;
-            this.ClientSize = new System.Drawing.Size(backgroundImageWidth, backgroundImageHeight);
-            backgroundImageX = 0;
-            playerX = 10;
-            playerY = (backgroundImage.Height - playerImage.Height) / 2;
-            backgroundThread= new Thread(backgroundMove);
-            backgroundThread.Start();
+            this.ClientSize = new System.Drawing.Size(Program.resourceManager.BackgroundImage.Width
+                , Program.resourceManager.BackgroundImage.Height);
+           
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.DrawImage(backgroundImage, backgroundImageX, 0);//배경이미지1
-            e.Graphics.DrawImage(backgroundImage, backgroundImage.Width+backgroundImageX, 0);//배경이미지2
-            e.Graphics.DrawImage(playerImage, playerX, playerY);
+            e.Graphics.DrawImage(Program.resourceManager.BackgroundImage, 
+                Program.moveBackGround.backgroundImageX, 0);//배경이미지1
+            e.Graphics.DrawImage(Program.resourceManager.BackgroundImage,
+                Program.resourceManager.BackgroundImage.Width +
+                Program.moveBackGround.backgroundImageX, 0);//배경이미지2
+            e.Graphics.DrawImage(Program.resourceManager.PlayerImage, 
+                Program.player.playerX, Program.player.playerY);
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            isContinue = false; // refreshScreen() 함수의 반복문 종료
-            backgroundThread.Join(); // 쓰레드 종료 기다리기
+            Program.moveBackGround.IsBackgroundMove = false;
+            Program.moveBackGround.BackgroundMoveEnd(); 
         }
     }
 }

@@ -8,15 +8,34 @@ using System.Threading.Tasks;
 
 namespace MyShootingGame
 {
-    public partial class Form1
+    public class MoveBackGround
     {
-        bool isContinue = true;
-        private void backgroundMove()
+        public int backgroundImageX=0; // 배경 위치
+        private int backgroundImageWidth; // 이미지 폭
+        private int backgroundImageHeight; // 이미지 높이
+        private Thread backgroundThread;
+        private bool isBackgroundMove = true;
+        public bool IsBackgroundMove
         {
-            while (isContinue)
+            set
+            {
+                isBackgroundMove = value;
+            }
+        }
+        public MoveBackGround(int backgroundImageWidth, int backgroundImageHeight)
+        {
+            this.backgroundImageWidth = backgroundImageWidth;
+            this.backgroundImageHeight = backgroundImageHeight;
+
+            backgroundThread= new Thread(BackgroundMove);
+            backgroundThread.Start();
+        }
+        public void BackgroundMove()
+        {
+            while (isBackgroundMove)
             {
                 backgroundImageX -= 5;
-                if(backgroundImageX < -backgroundImageWidth)
+                if (backgroundImageX < -backgroundImageWidth)
                 {
                     backgroundImageX = 0;
                 }
@@ -24,13 +43,18 @@ namespace MyShootingGame
                 {
                     Thread.Sleep(16); // 0.2 초 기다림
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
                     break;
                 }
-                this.Invalidate();
+               
+                Program.form1.Invalidate();
             }
+        }
+        public void BackgroundMoveEnd()
+        {
+            backgroundThread.Join();
         }
     }
 }
