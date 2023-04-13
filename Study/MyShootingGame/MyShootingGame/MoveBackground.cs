@@ -41,7 +41,7 @@ namespace MyShootingGame
                 }
                 try
                 {
-                    Thread.Sleep(16); // 0.2 초 기다림
+                    Thread.Sleep(20); // 0.2 초 기다림
                 }
                 catch (Exception e)
                 {

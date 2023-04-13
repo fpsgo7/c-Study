@@ -23,7 +23,8 @@ namespace MyShootingGame
                resourceManager.BackgroundImage.Height);
             player = new Player(resourceManager.BackgroundImage.Width,
                resourceManager.BackgroundImage.Height,
-               resourceManager.PlayerImage.Height);
+               resourceManager.PlayerImage.Height,
+               resourceManager.PlayerImage.Width);
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

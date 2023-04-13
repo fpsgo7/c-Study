@@ -39,8 +39,60 @@ namespace MyShootingGame
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Program.player.IsPlayerMove = false;
+            Program.player.PlayerMoveEnd();
             Program.moveBackGround.IsBackgroundMove = false;
-            Program.moveBackGround.BackgroundMoveEnd(); 
+            Program.moveBackGround.BackgroundMoveEnd();
+
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Left)
+            {
+                Program.player.isMoveLeft =true;
+            }
+            if(e.KeyCode == Keys.Right)
+            {
+                Program.player.isMoveRight = true;
+            }
+            if(e.KeyCode == Keys.Up)
+            {
+                Program.player.isMoveUp = true;
+            }
+            if(e.KeyCode == Keys.Down)
+            {
+                Program.player.isMoveDown = true;
+            }
+            if (e.KeyData == Keys.Space)
+            {
+                Program.player.isFire = true;
+            }
+               
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                Program.player.isMoveLeft = false;
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                Program.player.isMoveRight = false;
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                Program.player.isMoveUp = false;
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                Program.player.isMoveDown = false;
+            }
+            if (e.KeyData == Keys.Space)
+            {
+                Program.player.isFire = false;
+            }
         }
     }
 }
