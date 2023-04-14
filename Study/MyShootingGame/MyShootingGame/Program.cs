@@ -9,9 +9,12 @@ namespace MyShootingGame
     static class Program
     {
         public static ResourceManager resourceManager;
+        public static ThreadManger threadManger;
         public static MoveBackGround moveBackGround;
-        public static Form1 form1;
-        public static Player player;
+        public static MainForm form1;
+        public static PlayerMove playerMove;
+
+        //public static Enemy enemy;
         /// <summary>
         /// 해당 애플리케이션의 주 진입점입니다.
         /// </summary>
@@ -21,14 +24,19 @@ namespace MyShootingGame
             resourceManager = new ResourceManager();
             moveBackGround = new MoveBackGround(resourceManager.BackgroundImage.Width,
                resourceManager.BackgroundImage.Height);
-            player = new Player(resourceManager.BackgroundImage.Width,
+            playerMove = new PlayerMove(resourceManager.BackgroundImage.Width,
                resourceManager.BackgroundImage.Height,
                resourceManager.PlayerImage.Height,
                resourceManager.PlayerImage.Width);
+            //enemy = new Enemy(resourceManager.BackgroundImage.Width,
+            //   resourceManager.BackgroundImage.Height,
+            //   resourceManager.PlayerImage.Height,
+            //   resourceManager.PlayerImage.Width);
+            threadManger = new ThreadManger();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(form1 = new Form1());
+            Application.Run(form1 = new MainForm());
         }
     }
 }

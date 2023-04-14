@@ -10,7 +10,7 @@ namespace MyShootingGame
 {
     public class MoveBackGround
     {
-        public int backgroundImageX=0; // 배경 위치
+        public int backgroundImageX = 0; // 배경 위치
         private int backgroundImageWidth; // 이미지 폭
         private int backgroundImageHeight; // 이미지 높이
         private Thread backgroundThread;
@@ -27,7 +27,7 @@ namespace MyShootingGame
             this.backgroundImageWidth = backgroundImageWidth;
             this.backgroundImageHeight = backgroundImageHeight;
 
-            backgroundThread= new Thread(BackgroundMove);
+            backgroundThread = new Thread(BackgroundMove);
             backgroundThread.Start();
         }
         public void BackgroundMove()
@@ -48,7 +48,7 @@ namespace MyShootingGame
                     Console.WriteLine(e.Message);
                     break;
                 }
-               
+
                 Program.form1.Invalidate();
             }
         }

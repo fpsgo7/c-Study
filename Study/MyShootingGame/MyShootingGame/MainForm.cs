@@ -11,16 +11,17 @@ using System.Windows.Forms;
 
 namespace MyShootingGame
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         //리소스를 관리하는 클래스 만들기
         //배경을 움직이는 클래스를 따로 만든다. 랜더큐 참고
         //플레이어 를 관리하는 클래스를 따로만든다.
         
         
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
+            
             this.ClientSize = new System.Drawing.Size(Program.resourceManager.BackgroundImage.Width
                 , Program.resourceManager.BackgroundImage.Height);
            
@@ -34,39 +35,40 @@ namespace MyShootingGame
                 Program.resourceManager.BackgroundImage.Width +
                 Program.moveBackGround.backgroundImageX, 0);//배경이미지2
             e.Graphics.DrawImage(Program.resourceManager.PlayerImage, 
-                Program.player.playerX, Program.player.playerY);
+                Program.playerMove.playerX, Program.playerMove.playerY);
+            //e.Graphics.DrawImage(Program.resourceManager.EnemyImage,
+            //    Program.enemy.enemyX, Program.enemy.enemyY);
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Program.player.IsPlayerMove = false;
-            Program.player.PlayerMoveEnd();
+            Program.threadManger.IsMainTrheadMove = false;
+            Program.threadManger.PlayeModeEnd();
             Program.moveBackGround.IsBackgroundMove = false;
             Program.moveBackGround.BackgroundMoveEnd();
-
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Left)
             {
-                Program.player.isMoveLeft =true;
+                Program.playerMove.isMoveLeft =true;
             }
             if(e.KeyCode == Keys.Right)
             {
-                Program.player.isMoveRight = true;
+                Program.playerMove.isMoveRight = true;
             }
             if(e.KeyCode == Keys.Up)
             {
-                Program.player.isMoveUp = true;
+                Program.playerMove.isMoveUp = true;
             }
             if(e.KeyCode == Keys.Down)
             {
-                Program.player.isMoveDown = true;
+                Program.playerMove.isMoveDown = true;
             }
             if (e.KeyData == Keys.Space)
             {
-                Program.player.isFire = true;
+                Program.playerMove.isFire = true;
             }
                
         }
@@ -75,23 +77,23 @@ namespace MyShootingGame
         {
             if (e.KeyCode == Keys.Left)
             {
-                Program.player.isMoveLeft = false;
+                Program.playerMove.isMoveLeft = false;
             }
             if (e.KeyCode == Keys.Right)
             {
-                Program.player.isMoveRight = false;
+                Program.playerMove.isMoveRight = false;
             }
             if (e.KeyCode == Keys.Up)
             {
-                Program.player.isMoveUp = false;
+                Program.playerMove.isMoveUp = false;
             }
             if (e.KeyCode == Keys.Down)
             {
-                Program.player.isMoveDown = false;
+                Program.playerMove.isMoveDown = false;
             }
             if (e.KeyData == Keys.Space)
             {
-                Program.player.isFire = false;
+                Program.playerMove.isFire = false;
             }
         }
     }

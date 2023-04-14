@@ -8,3 +8,13 @@ D:\unity\C#Study\c-Study\Study\MyShootingGame\MyShootingGame\obj\Debug\MyShootin
 D:\unity\C#Study\c-Study\Study\MyShootingGame\MyShootingGame\obj\Debug\MyShootingGame.csproj.CoreCompileInputs.cache
 D:\unity\C#Study\c-Study\Study\MyShootingGame\MyShootingGame\obj\Debug\MyShootingGame.exe
 D:\unity\C#Study\c-Study\Study\MyShootingGame\MyShootingGame\obj\Debug\MyShootingGame.pdb
+C:\대학교 4학년 1학기\c-Study\Study\MyShootingGame\MyShootingGame\bin\Debug\MyShootingGame.exe.config
+C:\대학교 4학년 1학기\c-Study\Study\MyShootingGame\MyShootingGame\bin\Debug\MyShootingGame.exe
+C:\대학교 4학년 1학기\c-Study\Study\MyShootingGame\MyShootingGame\bin\Debug\MyShootingGame.pdb
+C:\대학교 4학년 1학기\c-Study\Study\MyShootingGame\MyShootingGame\obj\Debug\MyShootingGame.csproj.AssemblyReference.cache
+C:\대학교 4학년 1학기\c-Study\Study\MyShootingGame\MyShootingGame\obj\Debug\MyShootingGame.Properties.Resources.resources
+C:\대학교 4학년 1학기\c-Study\Study\MyShootingGame\MyShootingGame\obj\Debug\MyShootingGame.csproj.GenerateResource.cache
+C:\대학교 4학년 1학기\c-Study\Study\MyShootingGame\MyShootingGame\obj\Debug\MyShootingGame.csproj.CoreCompileInputs.cache
+C:\대학교 4학년 1학기\c-Study\Study\MyShootingGame\MyShootingGame\obj\Debug\MyShootingGame.exe
+C:\대학교 4학년 1학기\c-Study\Study\MyShootingGame\MyShootingGame\obj\Debug\MyShootingGame.pdb
+C:\대학교 4학년 1학기\c-Study\Study\MyShootingGame\MyShootingGame\obj\Debug\MyShootingGame.MainForm.resources
