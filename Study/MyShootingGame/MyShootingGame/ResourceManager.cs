@@ -9,34 +9,34 @@ using System.Windows.Forms;
 
 namespace MyShootingGame
 {
-    public class ResourceManager
+    static public class ResourceManager
     {
-        private Image backgroundImage; // 배경 이미지
-        private Image playerImage; // 플레이어 이미지
-        private Image bullet;//총알 이미지
-        private Image enemyImage;//적의 이미지
-        public Image BackgroundImage
+        static private Image backgroundImage; // 배경 이미지
+        static private Image playerImage; // 플레이어 이미지
+        static private Image bullet;//총알 이미지
+        static private Image enemyImage;//적의 이미지
+        static public Image BackgroundImage
         {
             get
             {
                 return backgroundImage;
             }
         }
-        public Image PlayerImage
+        static public Image PlayerImage
         {
             get
             {
                 return playerImage;
             }
         }
-        public Image EnemyImage
+        static public Image EnemyImage
         {
             get
             {
                 return EnemyImage;
             }
         }
-        public ResourceManager()
+        static public void Init()
         {
             try
             {  

@@ -8,7 +8,6 @@ namespace MyShootingGame
 {
     static class Program
     {
-        public static ResourceManager resourceManager;
         public static ThreadManger threadManger;
         public static MoveBackGround moveBackGround;
         public static MainForm form1;
@@ -21,13 +20,13 @@ namespace MyShootingGame
         [STAThread]
         static void Main()
         {
-            resourceManager = new ResourceManager();
-            moveBackGround = new MoveBackGround(resourceManager.BackgroundImage.Width,
-               resourceManager.BackgroundImage.Height);
-            playerMove = new PlayerMove(resourceManager.BackgroundImage.Width,
-               resourceManager.BackgroundImage.Height,
-               resourceManager.PlayerImage.Height,
-               resourceManager.PlayerImage.Width);
+            ResourceManager.Init();
+            //moveBackGround = new MoveBackGround(resourceManager.BackgroundImage.Width,
+            //   resourceManager.BackgroundImage.Height);
+            //playerMove = new PlayerMove(resourceManager.BackgroundImage.Width,
+            //   resourceManager.BackgroundImage.Height,
+            //   resourceManager.PlayerImage.Height,
+            //   resourceManager.PlayerImage.Width);
             //enemy = new Enemy(resourceManager.BackgroundImage.Width,
             //   resourceManager.BackgroundImage.Height,
             //   resourceManager.PlayerImage.Height,
