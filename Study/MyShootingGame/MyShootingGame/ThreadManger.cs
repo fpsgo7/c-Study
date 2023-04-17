@@ -10,7 +10,7 @@ namespace MyShootingGame
 {
     public class ThreadManger
     {
-        Thread moveThread;
+        Thread mainThread;
         private bool isMainTrheadMove = true;
         public bool IsMainTrheadMove
         {
@@ -21,15 +21,15 @@ namespace MyShootingGame
         }
         public ThreadManger()
         {
-            moveThread = new Thread(PlayMode);
-            moveThread.Start();
+            mainThread = new Thread(PlayMode);
+            mainThread.Start();
         }
 
         public void PlayMode()
         {
             while (isMainTrheadMove)
             {
-                Program.playerMove.PlayerControll();
+                GameWorld.player.PlayerControll();
                 try
                 {
                     Thread.Sleep(20); // 0.2 초 기다림
@@ -45,7 +45,7 @@ namespace MyShootingGame
 
         public void PlayeModeEnd()
         {
-            moveThread.Join();
+            mainThread.Join();
         }
     }
 }

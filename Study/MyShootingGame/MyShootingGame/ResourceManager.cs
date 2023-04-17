@@ -13,7 +13,7 @@ namespace MyShootingGame
     {
         static private Image backgroundImage; // 배경 이미지
         static private Image playerImage; // 플레이어 이미지
-        static private Image bullet;//총알 이미지
+        //static private Image bullet;//총알 이미지
         static private Image enemyImage;//적의 이미지
         static public Image BackgroundImage
         {

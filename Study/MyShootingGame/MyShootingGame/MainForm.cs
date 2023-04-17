@@ -16,59 +16,75 @@ namespace MyShootingGame
         //리소스를 관리하는 클래스 만들기
         //배경을 움직이는 클래스를 따로 만든다. 랜더큐 참고
         //플레이어 를 관리하는 클래스를 따로만든다.
-        
-        
+
+        Thread renderThread;
+        private bool isRenderThread = true;
+
         public MainForm()
         {
             InitializeComponent();
-            
-            this.ClientSize = new System.Drawing.Size(Program.resourceManager.BackgroundImage.Width
-                , Program.resourceManager.BackgroundImage.Height);
+            renderThread = new Thread(Rendering);
+            renderThread.Start();
+            this.ClientSize = new System.Drawing.Size(ResourceManager.BackgroundImage.Width
+                , ResourceManager.BackgroundImage.Height);
            
         }
-
+        public void Rendering()
+        {
+            while (isRenderThread)
+            {
+                this.Invalidate();
+                try
+                {
+                    Thread.Sleep(20); // 0.2 초 기다림
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    MessageBox.Show(e.Message);
+                    break;
+                }
+            }
+        }
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.DrawImage(Program.resourceManager.BackgroundImage, 
-                Program.moveBackGround.backgroundImageX, 0);//배경이미지1
-            e.Graphics.DrawImage(Program.resourceManager.BackgroundImage,
-                Program.resourceManager.BackgroundImage.Width +
-                Program.moveBackGround.backgroundImageX, 0);//배경이미지2
-            e.Graphics.DrawImage(Program.resourceManager.PlayerImage, 
-                Program.playerMove.playerX, Program.playerMove.playerY);
-            //e.Graphics.DrawImage(Program.resourceManager.EnemyImage,
-            //    Program.enemy.enemyX, Program.enemy.enemyY);
+            foreach (Render render in Renderer.renders)
+            {
+                e.Graphics.DrawImage(render.image,
+                   render.imageX, render.imageY);
+                render.MoveImage();
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Program.threadManger.IsMainTrheadMove = false;
-            Program.threadManger.PlayeModeEnd();
-            Program.moveBackGround.IsBackgroundMove = false;
-            Program.moveBackGround.BackgroundMoveEnd();
+            //Program.threadManger.IsMainTrheadMove = false;
+            //Program.threadManger.PlayeModeEnd();
+            isRenderThread = false;
+            renderThread.Join();
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Left)
             {
-                Program.playerMove.isMoveLeft =true;
+                GameWorld.player.isMoveLeft =true;
             }
             if(e.KeyCode == Keys.Right)
             {
-                Program.playerMove.isMoveRight = true;
+                GameWorld.player.isMoveRight = true;
             }
             if(e.KeyCode == Keys.Up)
             {
-                Program.playerMove.isMoveUp = true;
+                GameWorld.player.isMoveUp = true;
             }
             if(e.KeyCode == Keys.Down)
             {
-                Program.playerMove.isMoveDown = true;
+                GameWorld.player.isMoveDown = true;
             }
             if (e.KeyData == Keys.Space)
             {
-                Program.playerMove.isFire = true;
+                GameWorld.player.isFire = true;
             }
                
         }
@@ -77,23 +93,23 @@ namespace MyShootingGame
         {
             if (e.KeyCode == Keys.Left)
             {
-                Program.playerMove.isMoveLeft = false;
+                GameWorld.player.isMoveLeft = false;
             }
             if (e.KeyCode == Keys.Right)
             {
-                Program.playerMove.isMoveRight = false;
+                GameWorld.player.isMoveRight = false;
             }
             if (e.KeyCode == Keys.Up)
             {
-                Program.playerMove.isMoveUp = false;
+                GameWorld.player.isMoveUp = false;
             }
             if (e.KeyCode == Keys.Down)
             {
-                Program.playerMove.isMoveDown = false;
+                GameWorld.player.isMoveDown = false;
             }
             if (e.KeyData == Keys.Space)
             {
-                Program.playerMove.isFire = false;
+                GameWorld.player.isFire = false;
             }
         }
     }

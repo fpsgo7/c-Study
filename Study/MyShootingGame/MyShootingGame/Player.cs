@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyShootingGame
 {
-    public class PlayerMove
+    public class Player
     {
         public int playerX, playerY; //플레이어 위치
         public bool isMoveLeft;
@@ -21,7 +21,7 @@ namespace MyShootingGame
         private int playerSpeed = 10;
 
        
-        public PlayerMove(int backgroundWidth, int backgroundHeight,int playerHeight,int playerWidth)
+        public Player(int backgroundWidth, int backgroundHeight,int playerHeight,int playerWidth)
         {
             this.backgroundWidth = backgroundWidth;
             this.backgroundHeight = backgroundHeight;
@@ -31,6 +31,8 @@ namespace MyShootingGame
             playerY = 
                 (backgroundHeight
                 - this.playerHeight) / 2;
+            PlayerRender playerRender = new PlayerRender(playerX, playerY);
+            Renderer.AddRenders(playerRender);
         }
         public void PlayerControll()
         {

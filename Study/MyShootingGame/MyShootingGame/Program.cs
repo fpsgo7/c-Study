@@ -9,9 +9,6 @@ namespace MyShootingGame
     static class Program
     {
         public static ThreadManger threadManger;
-        public static MoveBackGround moveBackGround;
-        public static MainForm form1;
-        public static PlayerMove playerMove;
 
         //public static Enemy enemy;
         /// <summary>
@@ -21,21 +18,11 @@ namespace MyShootingGame
         static void Main()
         {
             ResourceManager.Init();
-            //moveBackGround = new MoveBackGround(resourceManager.BackgroundImage.Width,
-            //   resourceManager.BackgroundImage.Height);
-            //playerMove = new PlayerMove(resourceManager.BackgroundImage.Width,
-            //   resourceManager.BackgroundImage.Height,
-            //   resourceManager.PlayerImage.Height,
-            //   resourceManager.PlayerImage.Width);
-            //enemy = new Enemy(resourceManager.BackgroundImage.Width,
-            //   resourceManager.BackgroundImage.Height,
-            //   resourceManager.PlayerImage.Height,
-            //   resourceManager.PlayerImage.Width);
-            threadManger = new ThreadManger();
+            GameWorld.Init();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(form1 = new MainForm());
+            Application.Run(new MainForm());
         }
     }
 }
