@@ -1,0 +1,6 @@
+﻿  PointerArray2.cpp
+C:\대학교 4학년 1학기\c-Study\schoolStudyC\PointerArray2\PointerArray2\PointerArray2.cpp(14,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+C:\대학교 4학년 1학기\c-Study\schoolStudyC\PointerArray2\PointerArray2\PointerArray2.cpp(14,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int *'입니다.
+C:\대학교 4학년 1학기\c-Study\schoolStudyC\PointerArray2\PointerArray2\PointerArray2.cpp(14,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 3의 형식이 'int *'입니다.
+C:\대학교 4학년 1학기\c-Study\schoolStudyC\PointerArray2\PointerArray2\PointerArray2.cpp(14,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 4의 형식이 'int *'입니다.
+  PointerArray2.vcxproj -> C:\대학교 4학년 1학기\c-Study\schoolStudyC\PointerArray2\Debug\PointerArray2.exe
