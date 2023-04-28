@@ -1,7 +1,4 @@
 ﻿  PointerArray.cpp
-C:\대학교 4학년 1학기\c-Study\schoolStudyC\PointerArray\PointerArray\PointerArray.cpp(15,9): warning C4477: 'printf' : 서식 문자열 '%p'에 'void *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
-C:\대학교 4학년 1학기\c-Study\schoolStudyC\PointerArray\PointerArray\PointerArray.cpp(16,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int *'입니다.
-C:\대학교 4학년 1학기\c-Study\schoolStudyC\PointerArray\PointerArray\PointerArray.cpp(16,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 3의 형식이 'int *'입니다.
-C:\대학교 4학년 1학기\c-Study\schoolStudyC\PointerArray\PointerArray\PointerArray.cpp(19,9): warning C4477: 'printf' : 서식 문자열 '%p'에 'void *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
-C:\대학교 4학년 1학기\c-Study\schoolStudyC\PointerArray\PointerArray\PointerArray.cpp(28,9): warning C4101: 'arrD' :참조되지 않은 지역 변수입니다.
-  PointerArray.vcxproj -> C:\대학교 4학년 1학기\c-Study\schoolStudyC\PointerArray\Debug\PointerArray.exe
+D:\unity\C#Study\c-Study\schoolStudyC\PointerArray\PointerArray\PointerArray.cpp(16,9): warning C4477: 'printf' : 서식 문자열 '%p'에 'void *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
+D:\unity\C#Study\c-Study\schoolStudyC\PointerArray\PointerArray\PointerArray.cpp(34,9): warning C4101: 'arrD' :참조되지 않은 지역 변수입니다.
+  PointerArray.vcxproj -> D:\unity\C#Study\c-Study\schoolStudyC\PointerArray\Debug\PointerArray.exe
