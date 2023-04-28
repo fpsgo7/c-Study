@@ -10,7 +10,7 @@ void doubleValue(int* arr[4]) {//int** arr // 사이즈를 지정하지 않으면 편하게 쓸
 	arr[1][3] *= 2;
 }
 //중요 Tip f10번으로 한줄씩 진행할 수 있다.
-//중요 tip 
+//중요 tip 레퍼런스는 32비트 일경우 32비트, 64비트일경우 64비트이다.
 typedef int* pint; // int* 대신 pint를 사용할 것이다.
 int main(int argc, char* argv) {
 	int a;
@@ -42,7 +42,7 @@ int main(int argc, char* argv) {
 	
 	pb[2] = 223;
 	pb[count] = 343;
-
+	free(pb);
 	//2차원 배열
 	printf("\n 2차원 배열\n");
 	int arr2[3][6] = { {0,1,2},{3,4,5},{6,7,8} };
@@ -79,7 +79,11 @@ int main(int argc, char* argv) {
 	printf("arrD[1][3] = %d\n", arrD[1][3]);
 	doubleValue(arrD);
 	printf("arrD[1][3] = %d\n", arrD[1][3]);
-
+	free(pd);
+	free(arrD[0]);
+	free(arrD[1]);
+	free(arrD[2]);
+	free(arrD[3]);
 	int* pointer;
 	pointer = (int*)malloc(sizeof(int) * 6);
 	int** pp;
@@ -89,6 +93,12 @@ int main(int argc, char* argv) {
 	pp[1] = (int*)malloc(sizeof(int) * 3);
 	pp[2] = (int*)malloc(sizeof(int) * 5);
 	pp[3] = (int*)malloc(sizeof(int) * 2);
- 
+
+	free(pointer);
+	free(pp[0]);
+	free(pp[1]);
+	free(pp[2]);
+	free(pp[3]);
+	free(pp);// 논리적으로 작은것부터 큰것으로
 	return 1;
 }
