@@ -1,6 +1,5 @@
 ﻿  Study0428.cpp
-C:\대학교 4학년 1학기\c-Study\schoolStudyC\PointerArray3\PointerArray3\Study0428.cpp(61,33): warning C4474: 'printf' : 서식 문자열에 전달된 인수가 너무 많습니다.
-C:\대학교 4학년 1학기\c-Study\schoolStudyC\PointerArray3\PointerArray3\Study0428.cpp(61,33): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 3개가 제공되었습니다.
-C:\대학교 4학년 1학기\c-Study\schoolStudyC\PointerArray3\PointerArray3\Study0428.cpp(37,6): warning C4101: 'b' :참조되지 않은 지역 변수입니다.
-C:\대학교 4학년 1학기\c-Study\schoolStudyC\PointerArray3\PointerArray3\Study0428.cpp(66,7): warning C4101: 'p' :참조되지 않은 지역 변수입니다.
-  PointerArray3.vcxproj -> C:\대학교 4학년 1학기\c-Study\schoolStudyC\PointerArray3\Debug\PointerArray3.exe
+D:\unity\C#Study\c-Study\schoolStudyC\PointerArray3\PointerArray3\Study0428.cpp(62,33): warning C4474: 'printf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+D:\unity\C#Study\c-Study\schoolStudyC\PointerArray3\PointerArray3\Study0428.cpp(62,33): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 3개가 제공되었습니다.
+D:\unity\C#Study\c-Study\schoolStudyC\PointerArray3\PointerArray3\Study0428.cpp(37,6): warning C4101: 'b' :참조되지 않은 지역 변수입니다.
+  PointerArray3.vcxproj -> D:\unity\C#Study\c-Study\schoolStudyC\PointerArray3\Debug\PointerArray3.exe

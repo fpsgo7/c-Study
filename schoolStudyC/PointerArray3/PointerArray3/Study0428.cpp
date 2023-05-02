@@ -41,8 +41,9 @@ int main(int argc, char* argv) {
 	pb[0] = 23;
 	
 	pb[2] = 223;
-	pb[count] = 343;
-	free(pb);
+	pb[11] = 343;// 메모리 범위내에서 값을 넣어야 오류 발생을 방지한다.
+
+	free(pb);// 메모리 헤제 완료
 	//2차원 배열
 	printf("\n 2차원 배열\n");
 	int arr2[3][6] = { {0,1,2},{3,4,5},{6,7,8} };
@@ -60,13 +61,10 @@ int main(int argc, char* argv) {
 	printf("pArr2[1][2] = %d, *(pArr2[1]+2), *(*(pArr2+1)+2) = %d\n",
 		pArr2[1][2], *(pArr2[1] + 2), *(*(pArr2 + 1) + 2));
 
-
 	//가변 배열 만들기
 	printf("\n 가변 배열\n");
-	int* p[4];// 4개짜리 배열이 만들어진다.  == int* (p[4]);
+	//int* p[4];// 4개짜리 배열이 만들어진다.  == int* (p[4]);
 	
-	int* pd;
-	pd = (int*)malloc(sizeof(int) * 6);
 	int* arrD[4];// 스택
 	// 세로 4개 가로 6,3,5,2 개가 되는 배열이 탄생된다.
 	// arrD[0] 과 arrD[1]은 떨어져있다고 볼수 있으나
@@ -79,11 +77,12 @@ int main(int argc, char* argv) {
 	printf("arrD[1][3] = %d\n", arrD[1][3]);
 	doubleValue(arrD);
 	printf("arrD[1][3] = %d\n", arrD[1][3]);
-	free(pd);
-	free(arrD[0]);
-	free(arrD[1]);
-	free(arrD[2]);
-	free(arrD[3]);
+
+	free(arrD[0]);// arrD[0]가 메모리헤제가 되면 다른부분도 같이 해제가된다.
+	//free(arrD[1]);
+	//free(arrD[2]);
+	//free(arrD[3]);
+
 	int* pointer;
 	pointer = (int*)malloc(sizeof(int) * 6);
 	int** pp;
