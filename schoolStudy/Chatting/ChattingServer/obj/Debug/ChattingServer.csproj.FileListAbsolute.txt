@@ -1,0 +1,11 @@
+D:\Stillthere\Chatting\ChattingServer\bin\Debug\ChattingServer.exe.config
+D:\Stillthere\Chatting\ChattingServer\bin\Debug\ChattingServer.exe
+D:\Stillthere\Chatting\ChattingServer\bin\Debug\ChattingServer.pdb
+D:\Stillthere\Chatting\ChattingServer\obj\Debug\ChattingServer.csproj.AssemblyReference.cache
+D:\Stillthere\Chatting\ChattingServer\obj\Debug\ChattingServer.csproj.SuggestedBindingRedirects.cache
+D:\Stillthere\Chatting\ChattingServer\obj\Debug\ChattingServer.Form1.resources
+D:\Stillthere\Chatting\ChattingServer\obj\Debug\ChattingServer.Properties.Resources.resources
+D:\Stillthere\Chatting\ChattingServer\obj\Debug\ChattingServer.csproj.GenerateResource.cache
+D:\Stillthere\Chatting\ChattingServer\obj\Debug\ChattingServer.csproj.CoreCompileInputs.cache
+D:\Stillthere\Chatting\ChattingServer\obj\Debug\ChattingServer.exe
+D:\Stillthere\Chatting\ChattingServer\obj\Debug\ChattingServer.pdb
