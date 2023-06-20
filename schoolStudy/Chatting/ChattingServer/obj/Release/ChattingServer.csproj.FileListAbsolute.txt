@@ -1,0 +1,9 @@
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingServer\bin\Release\ChattingServer.exe.config
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingServer\bin\Release\ChattingServer.exe
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingServer\bin\Release\ChattingServer.pdb
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingServer\obj\Release\ChattingServer.Form1.resources
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingServer\obj\Release\ChattingServer.Properties.Resources.resources
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingServer\obj\Release\ChattingServer.csproj.GenerateResource.cache
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingServer\obj\Release\ChattingServer.csproj.CoreCompileInputs.cache
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingServer\obj\Release\ChattingServer.exe
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingServer\obj\Release\ChattingServer.pdb

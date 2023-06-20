@@ -9,3 +9,13 @@ D:\Stillthere\Chatting\ChattingClient\obj\Debug\ChattingClient.csproj.GenerateRe
 D:\Stillthere\Chatting\ChattingClient\obj\Debug\ChattingClient.csproj.CoreCompileInputs.cache
 D:\Stillthere\Chatting\ChattingClient\obj\Debug\ChattingClient.exe
 D:\Stillthere\Chatting\ChattingClient\obj\Debug\ChattingClient.pdb
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\bin\Debug\ChattingClient.exe.config
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\bin\Debug\ChattingClient.exe
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\bin\Debug\ChattingClient.pdb
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\obj\Debug\ChattingClient.csproj.AssemblyReference.cache
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\obj\Debug\ChattingClient.Form1.resources
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\obj\Debug\ChattingClient.Properties.Resources.resources
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\obj\Debug\ChattingClient.csproj.GenerateResource.cache
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\obj\Debug\ChattingClient.csproj.CoreCompileInputs.cache
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\obj\Debug\ChattingClient.exe
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\obj\Debug\ChattingClient.pdb

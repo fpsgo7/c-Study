@@ -1,0 +1,10 @@
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\bin\Release\ChattingClient.exe.config
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\bin\Release\ChattingClient.exe
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\bin\Release\ChattingClient.pdb
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\obj\Release\ChattingClient.csproj.AssemblyReference.cache
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\obj\Release\ChattingClient.Form1.resources
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\obj\Release\ChattingClient.Properties.Resources.resources
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\obj\Release\ChattingClient.csproj.GenerateResource.cache
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\obj\Release\ChattingClient.csproj.CoreCompileInputs.cache
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\obj\Release\ChattingClient.exe
+C:\대학교 4학년 1학기\c-Study\schoolStudy\Chatting\ChattingClient\obj\Release\ChattingClient.pdb

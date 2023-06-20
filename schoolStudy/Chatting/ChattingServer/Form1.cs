@@ -67,10 +67,13 @@ namespace ChattingServer
                     clientLst.Add(client);
                     if (client != null)
                     {
-                        string msg = "Welcome aboard!";
+                        string msg = "Welcome aboard";
+                        string packet;
+                        packet = String.Format
+                            ("{0}:who:all:{1}\r\n", "unknown",msg);
+                        client.Send(Encoding.ASCII.GetBytes(packet));
                         eventTxt.Text = "Welcome aboard!" + "\r\n" + eventTxt.Text;
-                        eventLB.Items.Add("Welcome aboard!");
-                        client.Send(Encoding.ASCII.GetBytes(msg + "\r\n"));
+
                         new Thread(
                             delegate ()
                             {
